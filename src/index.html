@@ -1,31 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./assets/dianpe.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/global-style.css">
+    <!-- <link rel="shortcut icon" href="./assets/dianpe.ico" type="image/x-icon"> -->
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Dianpe</title>
 </head>
-
 <body>
     <header>
-        <img src="https://docs.google.com/uc?id=1m3kAilozRDVxvUwFVkVjWazxAy7RO3lD" alt="" id="logo-dianpe">
+        <span>
+            <img src="#" alt="Logotipo da startup DIANPE">
+        </span>
         <nav>
-            <a href="#">Início</a>
-            <a href="#">Escolas</a>
-            <a href="#">Cursos</a>
-            <a href="#">Sugestões</a>
+            <ul>
+                <li>Início</li>
+                <li>Escolas</li>
+                <li>Cursos</li>
+                <li>Sugestões</li>
+            </ul>
         </nav>
+        <section>
+            <h1>Comece a construir o seu futuro agora.</h1>
+            <p>Selecione no filtro o que você deseja pesquisar e digite</p>
+            <div>
+                <select name="search-bar-filter" id="search-bar-filter">
+                    <option value="cursos" selected>Cursos</option>
+                    <option value="escolas">Escolas</option>
+                </select>
+                <div>
+                    <label for="search-bar" hidden>Barra de pesquisa</label>
+                    <input type="text" id="search-bar" name="search-bar" />
+                </div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <img src="#" alt="Imagem ilustrativa de uma escola">
+                <p>Escolas</p>
+            </div>
+            <div>
+                <img src="#" alt="Imagem ilustrativa de uma pessoa fazendo um curso">
+                <p>Cursos</p>
+            </div>
+        </section>
+        <section>
+            <article>
+                <h2></h2>
+                <div>
+                    <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Fonte:</p>
+                    <ul>
+                        <li><a href="https://www.google.com">https://www.google.com</a></li>
+                    </ul>
+                </div>
+            </article>
+            <div>
+                <video src="#"></video>
+            </div>
+        </section>
+        <section>
+            <h2>Idealizadores</h2>            
+            <div>
+                <div></div>
+            </div>
+        </section>
     </header>
-    <section>
-        <h1>Escolas:</h1>
-        <ul id="schools-list">
-
-        </ul>
-    </section>
-    <script src="./scripts/services/fetch-schools.js"></script>
 </body>
 
 </html>
