@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
     <link rel="stylesheet" href="./styles/global-style.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <!-- <link rel="shortcut icon" href="./assets/dianpe.ico" type="image/x-icon"> -->
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,64 +14,146 @@
     <title>Dianpe</title>
 </head>
 <body>
-    <header>
-        <span>
-            <img src="#" alt="Logotipo da startup DIANPE">
-        </span>
-        <nav>
-            <ul>
-                <li>Início</li>
-                <li>Escolas</li>
-                <li>Cursos</li>
-                <li>Sugestões</li>
+    <header class="pageHeader">
+        <img class="pageHeader__logo" src="../public/logo-dianpe.png" alt="Logotipo da startup DIANPE">
+        <nav class="pageHeader__pagesNav">
+            <ul class="pageHeader__navList">
+                <li class="pageHeader__navItem pageHeader__navItem--active">Início</li>
+                <li class="pageHeader__navItem">Escolas</li>
+                <li class="pageHeader__navItem">Cursos</li>
+                <li class="pageHeader__navItem">Sugestões</li>
             </ul>
         </nav>
-        <section>
-            <h1>Comece a construir o seu futuro agora.</h1>
-            <p>Selecione no filtro o que você deseja pesquisar e digite</p>
-            <div>
-                <select name="search-bar-filter" id="search-bar-filter">
-                    <option value="cursos" selected>Cursos</option>
-                    <option value="escolas">Escolas</option>
-                </select>
-                <div>
-                    <label for="search-bar" hidden>Barra de pesquisa</label>
-                    <input type="text" id="search-bar" name="search-bar" />
-                </div>
-            </div>
-        </section>
-        <section>
-            <div>
-                <img src="#" alt="Imagem ilustrativa de uma escola">
-                <p>Escolas</p>
-            </div>
-            <div>
-                <img src="#" alt="Imagem ilustrativa de uma pessoa fazendo um curso">
-                <p>Cursos</p>
-            </div>
-        </section>
-        <section>
-            <article>
-                <h2></h2>
-                <div>
-                    <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <p>Fonte:</p>
-                    <ul>
-                        <li><a href="https://www.google.com">https://www.google.com</a></li>
-                    </ul>
-                </div>
-            </article>
-            <div>
-                <video src="#"></video>
-            </div>
-        </section>
-        <section>
-            <h2>Idealizadores</h2>            
-            <div>
-                <div></div>
-            </div>
-        </section>
     </header>
+    <section class="heroSection">
+        <h1 class="heroSection__title">Comece a construir o seu<br/>futuro agora.</h1>
+        <p class="heroSection__subtitle">Selecione no filtro o que você deseja pesquisar e digite</p>
+        <div class="heroSection__searchBar">
+            <label for="search-bar-filter" class="searchBar__selectLabel">              
+                <select class="searchBar__select" name="search-bar-filter" id="search-bar-filter">
+                    <option class="searchBar__option" value="cursos" selected>Cursos</option>
+                    <option class="searchBar__option" value="escolas">Escolas</option>
+                </select>
+            </label>
+            <div>
+                <label for="search-bar" hidden>Barra de pesquisa</label>
+                <input class="searchBar__inputBar" type="text" id="search-bar" name="search-bar" />
+            </div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <img src="#" alt="Imagem ilustrativa de uma escola">
+            <p>Escolas</p>
+        </div>
+        <div>
+            <img src="#" alt="Imagem ilustrativa de uma pessoa fazendo um curso">
+            <p>Cursos</p>
+        </div>
+    </section>
+    <section>
+        <article>
+            <h2></h2>
+            <div>
+                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Fonte:</p>
+                <ul>
+                    <li><a href="https://www.google.com">https://www.google.com</a></li>
+                </ul>
+            </div>
+        </article>
+        <div>
+            <video src="#"></video>
+        </div>
+    </section>
+    <section>
+        <h2>Idealizadores</h2>            
+        <div>
+            <div>
+                <span>
+                    <img src="#" alt="Foto de Diogo Ferreira">
+                </span>
+                <span>
+                    <p>Diogo Ferreira</p>
+                    <p>- Desenvolvedor Fullstack -</p>
+                    <div>
+                        <img src="#" alt="Logotipo do Github">
+                        <img src="#" alt="Logotipo do LinkedIn">
+                        <img src="#" alt="Logotipo do Email">
+                    </div>
+                </span>
+            </div>
+            <div>
+                <span>
+                    <img src="#" alt="Foto de Ana Matosinhos">
+                </span>
+                <span>
+                    <p>Ana Matosinhos</p>
+                    <p>- Desenvolvedor Frontend -</p>
+                    <div>
+                        <img src="#" alt="Logotipo do Github">
+                        <img src="#" alt="Logotipo do LinkedIn">
+                        <img src="#" alt="Logotipo do Email">
+                    </div>
+                </span>
+            </div>
+            <div>
+                <span>
+                    <img src="#" alt="Foto de Kauã Silva">
+                </span>
+                <span>
+                    <p>Kauã Silva</p>
+                    <p>- Desenvolvedor Frontend -</p>
+                    <div>
+                        <img src="#" alt="Logotipo do Github">
+                        <img src="#" alt="Logotipo do LinkedIn">
+                        <img src="#" alt="Logotipo do Email">
+                    </div>
+                </span>
+            </div>
+            <div>
+                <span>
+                    <img src="#" alt="Foto de Kauã Rodrigues">
+                </span>
+                <span>
+                    <p>Kauã Rodrigues</p>
+                    <p>- Desenvolvedor Fullstack -</p>
+                    <div>
+                        <img src="#" alt="Logotipo do Github">
+                        <img src="#" alt="Logotipo do LinkedIn">
+                        <img src="#" alt="Logotipo do Email">
+                    </div>
+                </span>
+            </div>
+            <div>
+                <span>
+                    <img src="#" alt="Foto de Luiz Silva">
+                </span>
+                <span>
+                    <p>Luiz Silva</p>
+                    <p>- Desenvolvedor Fullstack -</p>
+                    <div>
+                        <img src="#" alt="Logotipo do Github">
+                        <img src="#" alt="Logotipo do LinkedIn">
+                        <img src="#" alt="Logotipo do Email">
+                    </div>
+                </span>
+            </div>
+            <div>
+                <span>
+                    <img src="#" alt="Foto de Pedro Guerra">
+                </span>
+                <span>
+                    <p>Pedro Guerra</p>
+                    <p>- Desenvolvedor Fullstack -</p>
+                    <div>
+                        <img src="#" alt="Logotipo do Github">
+                        <img src="#" alt="Logotipo do LinkedIn">
+                        <img src="#" alt="Logotipo do Email">
+                    </div>
+                </span>
+            </div>
+        </div>
+    </section>
 </body>
-
 </html>

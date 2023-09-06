@@ -1,3 +1,17 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --fonte: 'Roboto', sans-serif;
+    --cor-texto: #636466;
+    --azul-claro: #5CE1E6;
+    --rosa-claro: #FF8BD2;
+    --amarelo-claro: #FFDE59;
+    --laranja-claro: #FFBD59;
+}
+
+html {
+    font-size: 62.5%;
 }

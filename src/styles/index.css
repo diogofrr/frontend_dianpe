@@ -1,0 +1,98 @@
+.pageHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
+    height: 80px;
+}
+
+    .pageHeader__logo {
+        width: 120px;
+        height: 54px;
+    }
+
+    .pageHeader__navList {
+        display: flex;
+        list-style: none;
+    }
+
+    .pageHeader__navItem {
+        font-family: var(--fonte);
+        font-size: 1.6rem;
+        font-weight: 500;
+        padding: 4px 12px;
+        margin-left: 40px;
+        cursor: pointer;
+    }
+
+    .pageHeader__navItem:hover {
+        color: var(--cor-texto);
+        border-color: var(--cor-texto);
+    }
+
+    .pageHeader__navItem--active {
+        border-bottom: black solid 5px;
+    }
+
+.heroSection {
+    background: linear-gradient(95deg, #17B3B9 48.55%, #5CE1E6 97.33%);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 70px;
+}
+
+    .heroSection__title {
+        color: #FFF;
+        font-family: var(--fonte);
+        font-size: 6.4rem;
+        font-weight: normal;
+    }
+
+    .heroSection__subtitle {
+        color: #FFF;
+        font-size: 2.4rem;
+        font-family: var(--fonte);
+        font-weight: 300;
+        margin-top: 24px;
+        margin-bottom: 52px;
+    }
+
+    .heroSection__searchBar {
+        display: flex;
+        gap: 16px;
+        flex-wrap: nowrap;
+    }
+
+        .searchBar__select {
+            background-color: transparent;
+            padding: 12px 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            outline: none;
+            color: #EBEBEB;
+            border: 2px solid white;
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 1.6px;
+
+            appearance: none;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0iI0ZGRiIgY2xhc3M9InctNiBoLTYiPg0KICA8cGF0aCBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik0xOS41IDguMjVsLTcuNSA3LjUtNy41LTcuNSIgLz4NCjwvc3ZnPg0K");
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 20px;
+        }
+
+        .searchBar__option {
+            background-color: white;
+            outline: none;
+            color: black;
+            border: solid 2px white;
+        }
+    
