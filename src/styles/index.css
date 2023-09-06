@@ -36,7 +36,7 @@
 
 .heroSection {
     background: linear-gradient(95deg, #17B3B9 48.55%, #5CE1E6 97.33%);
-    height: 60vh;
+    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,14 +44,14 @@
 }
 
     .heroSection__title {
-        color: #FFF;
+        color: #EBEBEB;
         font-family: var(--fonte);
         font-size: 6.4rem;
         font-weight: normal;
     }
 
     .heroSection__subtitle {
-        color: #FFF;
+        color: #EBEBEB;
         font-size: 2.4rem;
         font-family: var(--fonte);
         font-weight: 300;
@@ -74,10 +74,9 @@
             gap: 10px;
             outline: none;
             color: #EBEBEB;
-            border: 2px solid white;
-            font-family: Roboto;
+            border: 2px solid #EBEBEB;
+            font-family: var(--fonte);
             font-size: 16px;
-            font-style: normal;
             font-weight: 400;
             line-height: normal;
             letter-spacing: 1.6px;
@@ -90,9 +89,127 @@
         }
 
         .searchBar__option {
-            background-color: white;
+            background-color: #EBEBEB;
             outline: none;
             color: black;
-            border: solid 2px white;
+            border: solid 2px #EBEBEB;
         }
-    
+
+        .searchBar__inputBar {
+            border: 2px solid #EBEBEB;
+            outline: none;
+            height: 47px;
+            width: 83rem;
+            padding: 5px 12px;
+            background-color: transparent;
+            color: #EBEBEB;
+            font-family: var(--fonte);
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .searchBar__inputBar::placeholder {
+            color: #EBEBEB;
+        }
+
+
+.cardSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    top: -150px;
+}
+    .cardSection__card {
+        padding-bottom: 16px;
+        border-radius: 16px;
+        height: 500px;
+        width: 400px;
+        background-color: #FFF;
+        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+    }
+        .card__cardImage {
+            width: 420px;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .card__cardTitle {
+            font-family: var(--fonte);
+            color: #636466;
+            font-size: 3.2rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 0.16rem;
+            text-align: center;
+        }
+
+.whySection {
+    background-color: #F9F9F9;
+    min-height: 80vh;
+    padding: 70px;
+    padding-top: 48px;
+    display: flex;
+}
+
+    .whySection__article {
+        width: 100%;
+    }
+
+    .whySection__articleTitle {
+        font-family: var(--fonte);
+        color: var(--cor-texto);
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 2.4px;
+        padding-bottom: 5.4rem;
+        
+    }
+
+    .whySection__articleParagraph {
+        font-family: var(--fonte);
+        color: var(--cor-texto);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        padding-bottom: 2.4rem;
+        max-width: 64rem;
+    }
+
+    .whySection__articleListLabel {
+        font-family: var(--fonte);
+        color: var(--cor-texto);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        display: inline;
+    }
+
+    .whySection__list {
+        list-style: none;
+    }
+
+    .whySection__articleLink {
+        font-family: var(--fonte);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .whySection__contentContainer {
+        display: flex;
+    }
+
+    .whySection__video::after {
+        display: block;
+        width: 600px;
+        height: 360px;
+        background-color: var(--amarelo-claro);
+    }
