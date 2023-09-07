@@ -112,6 +112,20 @@
             color: #EBEBEB;
         }
 
+        .searchBar__inputContainer {
+            display: flex;
+        }
+
+        .searchBar__inputButton {
+            background-color: #EBEBEB;
+            border: 2px solid #EBEBEB;
+        }
+
+        .searchBar__inputButtonIcon {
+            height: 24px;
+            padding: 0 8px;
+            color: var(--cor-texto);
+        }
 
 .cardSection {
     display: flex;
@@ -136,7 +150,7 @@
 
         .card__cardTitle {
             font-family: var(--fonte);
-            color: #636466;
+            color: var(--cor-texto);
             font-size: 3.2rem;
             font-style: normal;
             font-weight: 500;
@@ -212,4 +226,8 @@
         width: 600px;
         height: 360px;
         background-color: var(--amarelo-claro);
+    }
+
+    .whySection__videoSquare {
+        
     }

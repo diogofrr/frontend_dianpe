@@ -37,7 +37,14 @@
             </label>
             <div>
                 <label for="search-bar" hidden>Barra de pesquisa</label>
-                <input class="searchBar__inputBar" type="text" id="search-bar" name="search-bar" placeholder="Digite o que você deseja pesquisar aqui"/>
+                <div class="searchBar__inputContainer">
+                    <input class="searchBar__inputBar" type="text" id="search-bar" name="search-bar" placeholder="Digite o que você deseja pesquisar aqui"/>
+                    <button class="searchBar__inputButton">
+                        <svg class="searchBar__inputButtonIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -56,7 +63,14 @@
             <h2 class="whySection__articleTitle">Por que devo fazer um curso?</h2>
             <div class="whySection__contentContainer">
                 <div>
-                    <p class="whySection__articleParagraph">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p class="whySection__articleParagraph">
+                        is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                        it to make a type specimen book. It has survived not only five centuries, but also the leap into
+                        electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                        software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
                     <ul class="whySection__list">
                         <li class="whySection__listIem">
                             <p class="whySection__articleListLabel">Fonte: </p>
@@ -65,6 +79,7 @@
                     </ul>
                 </div>
                 <iframe class="whySection__video" width="600" height="360" src="https://www.youtube.com/embed/9GdesxWtOgs?si=gwZKSom6djb7N_WT&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <span class="whySection__videoSquare"></span>
             </div>
         </article>
     </section>
