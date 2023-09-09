@@ -50,11 +50,11 @@
     </section>
     <section class="cardSection">
         <div class="cardSection__card">
-            <img class="card__cardImage" src="#" alt="Imagem ilustrativa de uma escola">
+            <div class="card__cardSchoolImage" alt="Imagem ilustrativa de uma escola"></div>
             <p class="card__cardTitle">Escolas</p>
         </div>
         <div class="cardSection__card">
-            <img class="card__cardImage" src="#" alt="Imagem ilustrativa de uma pessoa fazendo um curso">
+            <div class="card__cardCourseImage" alt="Imagem ilustrativa de uma pessoa fazendo um curso"></div>
             <p class="card__cardTitle">Cursos</p>
         </div>
     </section>
@@ -78,99 +78,140 @@
                         </li>
                     </ul>
                 </div>
-                <iframe class="whySection__video" width="600" height="360" src="https://www.youtube.com/embed/9GdesxWtOgs?si=gwZKSom6djb7N_WT&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <span class="whySection__videoSquare"></span>
+                <div class="whySection__videoContainer">
+                    <iframe class="whySection__video" src="https://www.youtube.com/embed/9GdesxWtOgs?si=gwZKSom6djb7N_WT&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="whySection__overlay"></div>
+                </div>
             </div>
         </article>
     </section>
-    <section>
-        <h2>Idealizadores</h2>            
-        <div>
-            <div>
-                <span>
-                    <img src="#" alt="Foto de Diogo Ferreira">
-                </span>
-                <span>
-                    <p>Diogo Ferreira</p>
-                    <p>- Desenvolvedor Fullstack -</p>
-                    <div>
-                        <img src="#" alt="Logotipo do Github">
-                        <img src="#" alt="Logotipo do LinkedIn">
-                        <img src="#" alt="Logotipo do Email">
+    <section class="authorsSection">
+        <h2 class="authorsSection__title">Idealizadores</h2>            
+        <div class="authorsSection__cardContainer">
+            <div class="authorsSection__card">
+                <div class="authorsSection__cardImgContainer">
+                    <img class="authorsSection__cardImg" src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1" alt="Foto de Diogo Ferreira">
+                </div>
+                <div class="authorsSection__cardDescContainer">
+                    <p class="authorsSection__cardName">Diogo Ferreira</p>
+                    <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
+                    <div class="authorsSection__cardIcons">
+                        <a href="https://github.com/diogofrr" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/github-mark.svg" alt="Logotipo do Github">
+                        </a>
+                        <a href="https://linkedin.com/in/diogohfrr" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/linkedin.png" alt="Logotipo do LinkedIn">
+                        </a>
+                        <a href="mailto:ddiogof20@gmail.com" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/gmail.png" alt="Logotipo do Email">
+                        </a>
                     </div>
-                </span>
+                </div>
             </div>
-            <div>
-                <span>
-                    <img src="#" alt="Foto de Ana Matosinhos">
-                </span>
-                <span>
-                    <p>Ana Matosinhos</p>
-                    <p>- Desenvolvedor Frontend -</p>
-                    <div>
-                        <img src="#" alt="Logotipo do Github">
-                        <img src="#" alt="Logotipo do LinkedIn">
-                        <img src="#" alt="Logotipo do Email">
+            <div class="authorsSection__card">
+                <div class="authorsSection__cardImgContainer">
+                    <img class="authorsSection__cardImg" src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1" alt="Foto de Diogo Ferreira">
+                </div>
+                <div class="authorsSection__cardDescContainer">
+                    <p class="authorsSection__cardName">Diogo Ferreira</p>
+                    <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
+                    <div class="authorsSection__cardIcons">
+                        <a href="https://github.com/diogofrr" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/github-mark.svg" alt="Logotipo do Github">
+                        </a>
+                        <a href="https://linkedin.com/in/diogohfrr" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/linkedin.png" alt="Logotipo do LinkedIn">
+                        </a>
+                        <a href="mailto:ddiogof20@gmail.com" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/gmail.png" alt="Logotipo do Email">
+                        </a>
                     </div>
-                </span>
+                </div>
             </div>
-            <div>
-                <span>
-                    <img src="#" alt="Foto de Kauã Silva">
-                </span>
-                <span>
-                    <p>Kauã Silva</p>
-                    <p>- Desenvolvedor Frontend -</p>
-                    <div>
-                        <img src="#" alt="Logotipo do Github">
-                        <img src="#" alt="Logotipo do LinkedIn">
-                        <img src="#" alt="Logotipo do Email">
+            <div class="authorsSection__card">
+                <div class="authorsSection__cardImgContainer">
+                    <img class="authorsSection__cardImg" src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1" alt="Foto de Diogo Ferreira">
+                </div>
+                <div class="authorsSection__cardDescContainer">
+                    <p class="authorsSection__cardName">Diogo Ferreira</p>
+                    <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
+                    <div class="authorsSection__cardIcons">
+                        <a href="https://github.com/diogofrr" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/github-mark.svg" alt="Logotipo do Github">
+                        </a>
+                        <a href="https://linkedin.com/in/diogohfrr" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/linkedin.png" alt="Logotipo do LinkedIn">
+                        </a>
+                        <a href="mailto:ddiogof20@gmail.com" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/gmail.png" alt="Logotipo do Email">
+                        </a>
                     </div>
-                </span>
+                </div>
             </div>
-            <div>
-                <span>
-                    <img src="#" alt="Foto de Kauã Rodrigues">
-                </span>
-                <span>
-                    <p>Kauã Rodrigues</p>
-                    <p>- Desenvolvedor Fullstack -</p>
-                    <div>
-                        <img src="#" alt="Logotipo do Github">
-                        <img src="#" alt="Logotipo do LinkedIn">
-                        <img src="#" alt="Logotipo do Email">
+            <div class="authorsSection__card">
+                <div class="authorsSection__cardImgContainer">
+                    <img class="authorsSection__cardImg" src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1" alt="Foto de Diogo Ferreira">
+                </div>
+                <div class="authorsSection__cardDescContainer">
+                    <p class="authorsSection__cardName">Diogo Ferreira</p>
+                    <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
+                    <div class="authorsSection__cardIcons">
+                        <a href="https://github.com/diogofrr" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/github-mark.svg" alt="Logotipo do Github">
+                        </a>
+                        <a href="https://linkedin.com/in/diogohfrr" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/linkedin.png" alt="Logotipo do LinkedIn">
+                        </a>
+                        <a href="mailto:ddiogof20@gmail.com" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/gmail.png" alt="Logotipo do Email">
+                        </a>
                     </div>
-                </span>
+                </div>
             </div>
-            <div>
-                <span>
-                    <img src="#" alt="Foto de Luiz Silva">
-                </span>
-                <span>
-                    <p>Luiz Silva</p>
-                    <p>- Desenvolvedor Fullstack -</p>
-                    <div>
-                        <img src="#" alt="Logotipo do Github">
-                        <img src="#" alt="Logotipo do LinkedIn">
-                        <img src="#" alt="Logotipo do Email">
+            <div class="authorsSection__card">
+                <div class="authorsSection__cardImgContainer">
+                    <img class="authorsSection__cardImg" src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1" alt="Foto de Diogo Ferreira">
+                </div>
+                <div class="authorsSection__cardDescContainer">
+                    <p class="authorsSection__cardName">Diogo Ferreira</p>
+                    <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
+                    <div class="authorsSection__cardIcons">
+                        <a href="https://github.com/diogofrr" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/github-mark.svg" alt="Logotipo do Github">
+                        </a>
+                        <a href="https://linkedin.com/in/diogohfrr" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/linkedin.png" alt="Logotipo do LinkedIn">
+                        </a>
+                        <a href="mailto:ddiogof20@gmail.com" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/gmail.png" alt="Logotipo do Email">
+                        </a>
                     </div>
-                </span>
+                </div>
             </div>
-            <div>
-                <span>
-                    <img src="#" alt="Foto de Pedro Guerra">
-                </span>
-                <span>
-                    <p>Pedro Guerra</p>
-                    <p>- Desenvolvedor Fullstack -</p>
-                    <div>
-                        <img src="#" alt="Logotipo do Github">
-                        <img src="#" alt="Logotipo do LinkedIn">
-                        <img src="#" alt="Logotipo do Email">
+            <div class="authorsSection__card">
+                <div class="authorsSection__cardImgContainer">
+                    <img class="authorsSection__cardImg" src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1" alt="Foto de Diogo Ferreira">
+                </div>
+                <div class="authorsSection__cardDescContainer">
+                    <p class="authorsSection__cardName">Diogo Ferreira</p>
+                    <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
+                    <div class="authorsSection__cardIcons">
+                        <a href="https://github.com/diogofrr" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/github-mark.svg" alt="Logotipo do Github">
+                        </a>
+                        <a href="https://linkedin.com/in/diogohfrr" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/linkedin.png" alt="Logotipo do LinkedIn">
+                        </a>
+                        <a href="mailto:ddiogof20@gmail.com" target="_blank">
+                            <img class="authorsSection__cardIcon" src="../public/imgs/gmail.png" alt="Logotipo do Email">
+                        </a>
                     </div>
-                </span>
+                </div>
             </div>
         </div>
     </section>
+    <footer class="pageFooter">
+        <p class="pageFooter__text">© Copyright DIANPE - 2023. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
