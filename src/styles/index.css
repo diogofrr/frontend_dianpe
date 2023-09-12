@@ -146,6 +146,10 @@
         flex-direction: column;
     }
 
+    .cardSection__link {
+        text-decoration: none;
+    }
+
     .card__cardSchoolImage, .card__cardCourseImage {
         border-radius: 16px 16px 0 0;
         width: 100%;
