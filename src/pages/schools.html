@@ -1,71 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--CSS-->
-    <link rel="stylesheet" href="../styles/global-style.css">
-    <link rel="stylesheet" href="../styles/index.css">
-    <link rel="stylesheet" href="../styles/schools.css">
+    <link rel="stylesheet" href="../styles/global-style.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/schools.css" />
+    <link rel="stylesheet" href="../styles/spinner.css" />
+    <link rel="stylesheet" href="../styles/hamburguer.css" />
     <!-- <link rel="shortcut icon" href="./assets/dianpe.ico" type="image/x-icon"> -->
     <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Dianpe</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="pageHeader">
-        <img class="pageHeader__logo" src="../../public/logo-dianpe.png" alt="Logotipo da startup DIANPE">
-        <nav class="pageHeader__pagesNav">
-            <ul class="pageHeader__navList">
-                <li class="pageHeader__navItem pageHeader__navItem--active">Início</li>
-                <li class="pageHeader__navItem">Escolas</li>
-                <li class="pageHeader__navItem">Cursos</li>
-                <li class="pageHeader__navItem">Sugestões</li>
-            </ul>
-        </nav>
+      <a href="../index.html">
+        <img
+          class="pageHeader__logo"
+          src="../../public/logo-dianpe.png"
+          alt="Logotipo da startup DIANPE"
+        />
+      </a>
+      <nav class="pageHeader__pagesNav">
+        <ul class="pageHeader__navList" id="menu">
+          <li class="pageHeader__navItem">
+            <a href="../index.html" class="pageHeader__navLink"> Início </a>
+          </li>
+          <li class="pageHeader__navItem pageHeader__navItem--active">
+            <a href="../pages/schools.html" class="pageHeader__navLink">
+              Escolas
+            </a>
+          </li>
+          <li class="pageHeader__navItem">
+            <a href="#" class="pageHeader__navLink"> Cursos </a>
+          </li>
+          <li class="pageHeader__navItem">
+            <a href="#" class="pageHeader__navLink"> Sugestões </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hamburguerIcon" id="hamburguerIcon" aria-expanded="false">
+        <div class="hamburguerIcon__line1"></div>
+        <div class="hamburguerIcon__line2"></div>
+        <div class="hamburguerIcon__line3"></div>
+      </div>
     </header>
     <section class="subheader">
-        <div class="subheader__breadcrumb">
-            <a href="../index.html" class="breadcrumb__link">
-                Início
-            </a>
-            <span class="breadcrumb__arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="breadcrumb__arrow">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                </svg>                  
-            </span>
-            <span class="breadcrumb__linkActual">Escolas</span>
-        </div>
-        <h1 class="subheader__title">Escolas</h1>
-        <p class="subheader__description">
-            Nossa plataforma fornece informações detalhadas sobre diversas instituições
-            educacionais que oferecem cursos técnicos de alta qualidade em áreas como
-            tecnologia da informação, engenharia, saúde e muito mais.
-        </p>
+      <div class="subheader__breadcrumb">
+        <a href="../index.html" class="breadcrumb__link"> Início </a>
+        <span class="breadcrumb__arrow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="breadcrumb__arrow"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </span>
+        <span class="breadcrumb__linkActual">Escolas</span>
+      </div>
+      <h1 class="subheader__title">Escolas</h1>
+      <p class="subheader__description">
+        Nossa plataforma fornece informações detalhadas sobre diversas
+        instituições educacionais que oferecem cursos técnicos de alta qualidade
+        em áreas como tecnologia da informação, engenharia, saúde e muito mais.
+      </p>
     </section>
     <main>
-        <section class="schoolsCardSection">
-            <!-- <label for="schoolsSearchBar">
+      <section class="schoolsCardSection">
+        <!-- <label for="schoolsSearchBar">
                 <svg class="searchIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                 </svg>
                 <input type="text" name="schoolsSearchBar" id="schoolsCardSection__searchBar" placeholder="Pesquise o nome de uma escola aqui" class="schoolsCardSection__searchBar" />
             </label> -->
-            <ul class="schoolsCardSection__schools" id="schools__list">
-                <a href="" class="schoolsCardSection__schoolLink">
-                    <li class="schoolsCardSection__school">
-                        <img class="schoolsCardSection__img" src="https://www.youbilingue.com.br/blog/wp-content/uploads/2019/06/capa-blog-diferenciar-escola-min.png" alt="Foto da escola X" />
-                        <p class="schoolsCardSection__schoolDesc">
-                            <b>Escola A</b>
-                        </p>
-                    </li>
-                </a>
-            </ul>
-        </section>
+        <ul class="schoolsCardSection__schools" id="schools__list"></ul>
+        <div class="spinnerContainer" id="schools-spinner">
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="../scripts/services/fetch-schools.js"></script>
-</body>
+    <script src="../scripts/navbar.js"></script>
+  </body>
 </html>

@@ -1,221 +1,391 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--CSS-->
-    <link rel="stylesheet" href="./styles/global-style.css">
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/global-style.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/hamburguer.css" />
     <!-- <link rel="shortcut icon" href="./assets/dianpe.ico" type="image/x-icon"> -->
     <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Dianpe</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="pageHeader">
-        <img class="pageHeader__logo" src="../public/logo-dianpe.png" alt="Logotipo da startup DIANPE">
-        <nav class="pageHeader__pagesNav">
-            <ul class="pageHeader__navList">
-                <li class="pageHeader__navItem pageHeader__navItem--active">Início</li>
-                <li class="pageHeader__navItem">Escolas</li>
-                <li class="pageHeader__navItem">Cursos</li>
-                <li class="pageHeader__navItem">Sugestões</li>
-            </ul>
-        </nav>
+      <a href="./index.html">
+        <img
+          class="pageHeader__logo"
+          src="../../public/logo-dianpe.png"
+          alt="Logotipo da startup DIANPE"
+        />
+      </a>
+      <nav class="pageHeader__pagesNav">
+        <ul class="pageHeader__navList" id="menu">
+          <li class="pageHeader__navItem pageHeader__navItem--active">
+            <a href="./index.html" class="pageHeader__navLink"> Início </a>
+          </li>
+          <li class="pageHeader__navItem">
+            <a href="../src/pages/schools.html" class="pageHeader__navLink">
+              Escolas
+            </a>
+          </li>
+          <li class="pageHeader__navItem">
+            <a href="#" class="pageHeader__navLink"> Cursos </a>
+          </li>
+          <li class="pageHeader__navItem">
+            <a href="#" class="pageHeader__navLink"> Sugestões </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hamburguerIcon" id="hamburguerIcon" aria-expanded="false">
+        <div class="hamburguerIcon__line1"></div>
+        <div class="hamburguerIcon__line2"></div>
+        <div class="hamburguerIcon__line3"></div>
+      </div>
     </header>
     <section class="heroSection">
-        <h1 class="heroSection__title">Comece a construir o seu<br/>futuro agora.</h1>
-        <p class="heroSection__subtitle">Selecione no filtro o que você deseja pesquisar e digite</p>
-        <div class="heroSection__searchBar">
-            <label for="search-bar-filter" class="searchBar__selectLabel">              
-                <select class="searchBar__select" name="search-bar-filter" id="search-bar-filter">
-                    <option class="searchBar__option" value="cursos" selected>Cursos</option>
-                    <option class="searchBar__option" value="escolas">Escolas</option>
-                </select>
-            </label>
-            <div>
-                <label for="search-bar" hidden>Barra de pesquisa</label>
-                <div class="searchBar__inputContainer">
-                    <input class="searchBar__inputBar" type="text" id="search-bar" name="search-bar" placeholder="Digite o que você deseja pesquisar aqui"/>
-                    <button class="searchBar__inputButton">
-                        <svg class="searchBar__inputButtonIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
+      <h1 class="heroSection__title">
+        Comece a construir o seu<br />futuro agora.
+      </h1>
+      <p class="heroSection__subtitle">
+        Selecione no filtro o que você deseja pesquisar e digite
+      </p>
+      <div class="heroSection__searchBar">
+        <label for="search-bar-filter" class="searchBar__selectLabel">
+          <select
+            class="searchBar__select"
+            name="search-bar-filter"
+            id="search-bar-filter"
+          >
+            <option class="searchBar__option" value="cursos" selected>
+              Cursos
+            </option>
+            <option class="searchBar__option" value="escolas">Escolas</option>
+          </select>
+        </label>
+        <div>
+          <label for="search-bar" hidden>Barra de pesquisa</label>
+          <div class="searchBar__inputContainer">
+            <input
+              class="searchBar__inputBar"
+              type="text"
+              id="search-bar"
+              name="search-bar"
+              placeholder="Digite o que você deseja pesquisar aqui"
+            />
+            <button class="searchBar__inputButton">
+              <svg
+                class="searchBar__inputButtonIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
+      </div>
     </section>
     <section class="cardSection">
-        <a class="cardSection__link" href="pages/schools.html">
-            <div class="cardSection__card">
-                <div class="card__cardSchoolImage" alt="Imagem ilustrativa de uma escola"></div>
-                <p class="card__cardTitle">Escolas</p>
-            </div>
-        </a>
-        <a class="cardSection__link" href="#">
-            <div class="cardSection__card">
-                <div class="card__cardCourseImage" alt="Imagem ilustrativa de uma pessoa fazendo um curso"></div>
-                <p class="card__cardTitle">Cursos</p>
-            </div>
-        </a>
+      <a class="cardSection__link" href="pages/schools.html">
+        <div class="cardSection__card">
+          <div
+            class="card__cardSchoolImage"
+            alt="Imagem ilustrativa de uma escola"
+          ></div>
+          <p class="card__cardTitle">Escolas</p>
+        </div>
+      </a>
+      <a class="cardSection__link" href="#">
+        <div class="cardSection__card">
+          <div
+            class="card__cardCourseImage"
+            alt="Imagem ilustrativa de uma pessoa fazendo um curso"
+          ></div>
+          <p class="card__cardTitle">Cursos</p>
+        </div>
+      </a>
     </section>
     <section class="whySection">
-        <article class="whySection__article">
-            <h2 class="whySection__articleTitle">Por que devo fazer um curso?</h2>
-            <div class="whySection__contentContainer">
-                <div>
-                    <p class="whySection__articleParagraph">
-                        is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
-                        it to make a type specimen book. It has survived not only five centuries, but also the leap into
-                        electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                        software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-                    <ul class="whySection__list">
-                        <li class="whySection__listIem">
-                            <p class="whySection__articleListLabel">Fonte: </p>
-                            <a class="whySection__articleLink" href="https://www.google.com">https://www.google.com</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="whySection__videoContainer">
-                    <iframe class="whySection__video" src="https://www.youtube.com/embed/9GdesxWtOgs?si=gwZKSom6djb7N_WT&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <div class="whySection__overlay"></div>
-                </div>
-            </div>
-        </article>
+      <article class="whySection__article">
+        <h2 class="whySection__articleTitle">Por que devo fazer um curso?</h2>
+        <div class="whySection__contentContainer">
+          <div>
+            <p class="whySection__articleParagraph">
+              is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text ever since
+              the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book. It has survived not
+              only five centuries, but also the leap into electronic
+              typesetting, remaining essentially unchanged. It was popularised
+              in the 1960s with the release of Letraset sheets containing Lorem
+              Ipsum passages, and more recently with desktop publishing software
+              like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <ul class="whySection__list">
+              <li class="whySection__listIem">
+                <p class="whySection__articleListLabel">Fonte:</p>
+                <a class="whySection__articleLink" href="https://www.google.com"
+                  >https://www.google.com</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="whySection__videoContainer">
+            <iframe
+              class="whySection__video"
+              src="https://www.youtube.com/embed/9GdesxWtOgs?si=gwZKSom6djb7N_WT&amp;controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+            <div class="whySection__overlay"></div>
+          </div>
+        </div>
+      </article>
     </section>
     <section class="authorsSection">
-        <h2 class="authorsSection__title">Idealizadores</h2>            
-        <div class="authorsSection__cardContainer">
-            <div class="authorsSection__card">
-                <div class="authorsSection__cardImgContainer">
-                    <img class="authorsSection__cardImg" src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1" alt="Foto de Diogo Ferreira">
-                </div>
-                <div class="authorsSection__cardDescContainer">
-                    <p class="authorsSection__cardName">Diogo Ferreira</p>
-                    <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
-                    <div class="authorsSection__cardIcons">
-                        <a href="https://github.com/diogofrr" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/github-mark.svg" alt="Logotipo do Github">
-                        </a>
-                        <a href="https://linkedin.com/in/diogohfrr" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/linkedin.png" alt="Logotipo do LinkedIn">
-                        </a>
-                        <a href="mailto:ddiogof20@gmail.com" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/gmail.png" alt="Logotipo do Email">
-                        </a>
-                    </div>
-                </div>
+      <h2 class="authorsSection__title">Idealizadores</h2>
+      <div class="authorsSection__cardContainer">
+        <div class="authorsSection__card">
+          <div class="authorsSection__cardImgContainer">
+            <img
+              class="authorsSection__cardImg"
+              src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1"
+              alt="Foto de Diogo Ferreira"
+            />
+          </div>
+          <div class="authorsSection__cardDescContainer">
+            <p class="authorsSection__cardName">Diogo Ferreira</p>
+            <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
+            <div class="authorsSection__cardIcons">
+              <a href="https://github.com/diogofrr" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/github-mark.svg"
+                  alt="Logotipo do Github"
+                />
+              </a>
+              <a href="https://linkedin.com/in/diogohfrr" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/linkedin.png"
+                  alt="Logotipo do LinkedIn"
+                />
+              </a>
+              <a href="mailto:ddiogof20@gmail.com" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/gmail.png"
+                  alt="Logotipo do Email"
+                />
+              </a>
             </div>
-            <div class="authorsSection__card">
-                <div class="authorsSection__cardImgContainer">
-                    <img class="authorsSection__cardImg" src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1" alt="Foto de Diogo Ferreira">
-                </div>
-                <div class="authorsSection__cardDescContainer">
-                    <p class="authorsSection__cardName">Diogo Ferreira</p>
-                    <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
-                    <div class="authorsSection__cardIcons">
-                        <a href="https://github.com/diogofrr" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/github-mark.svg" alt="Logotipo do Github">
-                        </a>
-                        <a href="https://linkedin.com/in/diogohfrr" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/linkedin.png" alt="Logotipo do LinkedIn">
-                        </a>
-                        <a href="mailto:ddiogof20@gmail.com" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/gmail.png" alt="Logotipo do Email">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="authorsSection__card">
-                <div class="authorsSection__cardImgContainer">
-                    <img class="authorsSection__cardImg" src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1" alt="Foto de Diogo Ferreira">
-                </div>
-                <div class="authorsSection__cardDescContainer">
-                    <p class="authorsSection__cardName">Diogo Ferreira</p>
-                    <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
-                    <div class="authorsSection__cardIcons">
-                        <a href="https://github.com/diogofrr" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/github-mark.svg" alt="Logotipo do Github">
-                        </a>
-                        <a href="https://linkedin.com/in/diogohfrr" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/linkedin.png" alt="Logotipo do LinkedIn">
-                        </a>
-                        <a href="mailto:ddiogof20@gmail.com" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/gmail.png" alt="Logotipo do Email">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="authorsSection__card">
-                <div class="authorsSection__cardImgContainer">
-                    <img class="authorsSection__cardImg" src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1" alt="Foto de Diogo Ferreira">
-                </div>
-                <div class="authorsSection__cardDescContainer">
-                    <p class="authorsSection__cardName">Diogo Ferreira</p>
-                    <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
-                    <div class="authorsSection__cardIcons">
-                        <a href="https://github.com/diogofrr" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/github-mark.svg" alt="Logotipo do Github">
-                        </a>
-                        <a href="https://linkedin.com/in/diogohfrr" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/linkedin.png" alt="Logotipo do LinkedIn">
-                        </a>
-                        <a href="mailto:ddiogof20@gmail.com" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/gmail.png" alt="Logotipo do Email">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="authorsSection__card">
-                <div class="authorsSection__cardImgContainer">
-                    <img class="authorsSection__cardImg" src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1" alt="Foto de Diogo Ferreira">
-                </div>
-                <div class="authorsSection__cardDescContainer">
-                    <p class="authorsSection__cardName">Diogo Ferreira</p>
-                    <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
-                    <div class="authorsSection__cardIcons">
-                        <a href="https://github.com/diogofrr" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/github-mark.svg" alt="Logotipo do Github">
-                        </a>
-                        <a href="https://linkedin.com/in/diogohfrr" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/linkedin.png" alt="Logotipo do LinkedIn">
-                        </a>
-                        <a href="mailto:ddiogof20@gmail.com" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/gmail.png" alt="Logotipo do Email">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="authorsSection__card">
-                <div class="authorsSection__cardImgContainer">
-                    <img class="authorsSection__cardImg" src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1" alt="Foto de Diogo Ferreira">
-                </div>
-                <div class="authorsSection__cardDescContainer">
-                    <p class="authorsSection__cardName">Diogo Ferreira</p>
-                    <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
-                    <div class="authorsSection__cardIcons">
-                        <a href="https://github.com/diogofrr" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/github-mark.svg" alt="Logotipo do Github">
-                        </a>
-                        <a href="https://linkedin.com/in/diogohfrr" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/linkedin.png" alt="Logotipo do LinkedIn">
-                        </a>
-                        <a href="mailto:ddiogof20@gmail.com" target="_blank">
-                            <img class="authorsSection__cardIcon" src="../public/imgs/gmail.png" alt="Logotipo do Email">
-                        </a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="authorsSection__card">
+          <div class="authorsSection__cardImgContainer">
+            <img
+              class="authorsSection__cardImg"
+              src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1"
+              alt="Foto de Diogo Ferreira"
+            />
+          </div>
+          <div class="authorsSection__cardDescContainer">
+            <p class="authorsSection__cardName">Diogo Ferreira</p>
+            <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
+            <div class="authorsSection__cardIcons">
+              <a href="https://github.com/diogofrr" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/github-mark.svg"
+                  alt="Logotipo do Github"
+                />
+              </a>
+              <a href="https://linkedin.com/in/diogohfrr" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/linkedin.png"
+                  alt="Logotipo do LinkedIn"
+                />
+              </a>
+              <a href="mailto:ddiogof20@gmail.com" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/gmail.png"
+                  alt="Logotipo do Email"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="authorsSection__card">
+          <div class="authorsSection__cardImgContainer">
+            <img
+              class="authorsSection__cardImg"
+              src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1"
+              alt="Foto de Diogo Ferreira"
+            />
+          </div>
+          <div class="authorsSection__cardDescContainer">
+            <p class="authorsSection__cardName">Diogo Ferreira</p>
+            <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
+            <div class="authorsSection__cardIcons">
+              <a href="https://github.com/diogofrr" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/github-mark.svg"
+                  alt="Logotipo do Github"
+                />
+              </a>
+              <a href="https://linkedin.com/in/diogohfrr" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/linkedin.png"
+                  alt="Logotipo do LinkedIn"
+                />
+              </a>
+              <a href="mailto:ddiogof20@gmail.com" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/gmail.png"
+                  alt="Logotipo do Email"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="authorsSection__card">
+          <div class="authorsSection__cardImgContainer">
+            <img
+              class="authorsSection__cardImg"
+              src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1"
+              alt="Foto de Diogo Ferreira"
+            />
+          </div>
+          <div class="authorsSection__cardDescContainer">
+            <p class="authorsSection__cardName">Diogo Ferreira</p>
+            <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
+            <div class="authorsSection__cardIcons">
+              <a href="https://github.com/diogofrr" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/github-mark.svg"
+                  alt="Logotipo do Github"
+                />
+              </a>
+              <a href="https://linkedin.com/in/diogohfrr" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/linkedin.png"
+                  alt="Logotipo do LinkedIn"
+                />
+              </a>
+              <a href="mailto:ddiogof20@gmail.com" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/gmail.png"
+                  alt="Logotipo do Email"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="authorsSection__card">
+          <div class="authorsSection__cardImgContainer">
+            <img
+              class="authorsSection__cardImg"
+              src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1"
+              alt="Foto de Diogo Ferreira"
+            />
+          </div>
+          <div class="authorsSection__cardDescContainer">
+            <p class="authorsSection__cardName">Diogo Ferreira</p>
+            <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
+            <div class="authorsSection__cardIcons">
+              <a href="https://github.com/diogofrr" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/github-mark.svg"
+                  alt="Logotipo do Github"
+                />
+              </a>
+              <a href="https://linkedin.com/in/diogohfrr" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/linkedin.png"
+                  alt="Logotipo do LinkedIn"
+                />
+              </a>
+              <a href="mailto:ddiogof20@gmail.com" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/gmail.png"
+                  alt="Logotipo do Email"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="authorsSection__card">
+          <div class="authorsSection__cardImgContainer">
+            <img
+              class="authorsSection__cardImg"
+              src="https://veja.abril.com.br/wp-content/uploads/2023/09/Lula-cerimonia.jpg?quality=90&strip=info&w=1280&h=720&crop=1"
+              alt="Foto de Diogo Ferreira"
+            />
+          </div>
+          <div class="authorsSection__cardDescContainer">
+            <p class="authorsSection__cardName">Diogo Ferreira</p>
+            <p class="authorsSection__cardStack">- Desenvolvedor Fullstack -</p>
+            <div class="authorsSection__cardIcons">
+              <a href="https://github.com/diogofrr" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/github-mark.svg"
+                  alt="Logotipo do Github"
+                />
+              </a>
+              <a href="https://linkedin.com/in/diogohfrr" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/linkedin.png"
+                  alt="Logotipo do LinkedIn"
+                />
+              </a>
+              <a href="mailto:ddiogof20@gmail.com" target="_blank">
+                <img
+                  class="authorsSection__cardIcon"
+                  src="../public/imgs/gmail.png"
+                  alt="Logotipo do Email"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <footer class="pageFooter">
-        <p class="pageFooter__text">© Copyright DIANPE - 2023. Todos os direitos reservados.</p>
+      <p class="pageFooter__text">
+        © Copyright DIANPE - 2023. Todos os direitos reservados.
+      </p>
     </footer>
-</body>
+
+    <script src="./scripts/navbar.js"></script>
+  </body>
 </html>
