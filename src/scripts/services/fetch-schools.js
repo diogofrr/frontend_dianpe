@@ -45,6 +45,7 @@
         schoolsHtmlList.style.display = "flex";
         spinner.style.display = "none";
       } else {
+        spinner.style.display = "none";
       }
     }, 500);
   }

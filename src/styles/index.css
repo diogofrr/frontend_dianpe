@@ -18,10 +18,11 @@
 
 .pageHeader__navItem {
   width: 75px;
-  height: 28px;
+  height: 30px;
   text-align: center;
   margin-left: 40px;
   cursor: pointer;
+  margin-top: 16px;
 }
 
 .pageHeader__navLink {
@@ -417,10 +418,6 @@
 }
 
 @media screen and (max-width: 980px) {
-  html {
-    font-size: 50%;
-  }
-
   .cardSection {
     top: -100px;
     flex-direction: column;

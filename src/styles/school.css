@@ -1,0 +1,112 @@
+.schoolProfile {
+  width: 100vw;
+}
+
+  .schoolProfile__background {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background-color: aqua;
+  }
+
+  .schoolProfile__perfil {
+    position: relative;
+    top: 125px;
+  }
+
+  .schoolProfile__picture {
+    width: 300px;
+    height: 300px;
+    background-color: gray;
+    border-radius: 100%;
+    border: 3px solid #000;
+    background: #FFF;
+  }
+
+  .schoolProfile__name {
+    color: #000;
+    font-family: var(--fonte);
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 4px;
+    margin-top: 16px;
+  }
+
+.schoolInformation {
+  background-color: #4db85a80;
+  margin-top: 150px;
+  height: 300px;
+  padding: 32px 70px;
+}
+
+  .schoolInformation__title {
+    color: #000;
+    font-family: var(--fonte);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.8px;
+  }
+
+  .schoolInformation__list {
+    list-style: none;
+    margin-top: 32px;
+    width: 100%;
+  }
+
+  .schoolInformation__listItem {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+    margin: 16px 0;
+    width: 100%;
+  }
+
+  .schoolInformation__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .schoolInformation__information {
+    color: #000;
+    font-family: var(--fonte);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.8px;
+  }
+
+.schoolCourses {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding: 32px 70px;
+}
+
+  .schoolCourses__title {
+    color: #000;
+    font-family: var(--fonte);
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .schoolCourses__list {
+    display: none;
+    flex-wrap: wrap;
+    list-style: none;
+    flex: 1;
+    gap: 64px;
+  }
+
+.spinnerContainer {
+  width: 100vw;
+}
