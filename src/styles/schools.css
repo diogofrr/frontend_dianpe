@@ -65,6 +65,7 @@
 .schoolsCardSection {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 32px 70px;
 }
 
@@ -79,6 +80,7 @@
         list-style: none;
         flex: 1;
         gap: 64px;
+        max-width: 1440px;
     }
     
     .schoolsCardSection__school {

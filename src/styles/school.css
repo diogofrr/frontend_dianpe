@@ -12,7 +12,10 @@
     display: flex;
     align-items: end;
     justify-content: center;
-    background-color: gray;
+    background-color: lightgray;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .schoolProfile__perfil {
@@ -23,11 +26,13 @@
   .schoolProfile__picture {
     width: 300px;
     height: 300px;
-    background-color: gray;
     border-radius: 100%;
     border: 3px solid #000;
-    background: #FFF;
     margin: 0 auto;
+    background-color: gray;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .schoolProfile__name {
@@ -37,8 +42,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: 4px;
     margin-top: 16px;
+    text-align: center;
   }
 
 .schoolInformation {
@@ -55,7 +60,6 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: 0.8px;
   }
 
   .schoolInformation__list {
@@ -85,7 +89,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.8px;
   }
 
 .schoolCourses {
@@ -98,10 +101,11 @@
   .schoolCourses__title {
     color: #000;
     font-family: var(--fonte);
-    font-size: 27px;
+    font-size: 2.8rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin-bottom: 32px;
   }
 
   .schoolCourses__list {
@@ -112,19 +116,158 @@
     gap: 64px;
   }
 
+.schoolCourses__course {
+  background-color: white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 300px;
+  height: 360px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+  .schoolCourses__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+  }
+
+  .schoolCourses__link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .schoolCourses__name {
+    width: 100%;
+    background-color: white;
+    padding: 8px 0;
+    text-align: center;
+    color: #000;
+    font-family: var(--fonte);
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .schoolCourses__img {
+    position: relative;
+    top: 2px;
+    z-index: 1;
+    max-width: 100%;
+  }
+
 .notFound__container {
-  width: 100%;
-  height: calc(100vh - 80px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+width: 100%;
+height: calc(100vh - 80px);
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
 }
 
   .notFound__img {
     max-width: 40%;
   }
-  
+    
 .spinnerContainer {
   height: calc(100vh - 80px);
+}
+
+@media screen and (max-width: 1280px) {
+  .schoolProfile__name {
+    max-width: 480px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .schoolProfile__name {
+    font-size: 2.8rem;
+  }
+
+  .schoolInformation__title {
+    font-size: 2.0rem;
+  }
+
+  .schoolInformation__information {
+    font-size: 1.6rem;
+  }
+
+  .schoolCourses__list {
+    justify-content: center;
+  }
+
+  .schoolCourses__title {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 48px;
+    width: 100%;
+  }
+
+  .schoolCourses__name {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .schoolCourses__course {
+    width: 240px;
+    height: 300px;
+  }
+
+
+  .schoolProfile__name {
+    font-size: 2.4rem;
+  }
+
+  .schoolInformation__title {
+    font-size: 2.0rem;
+  }
+
+  .schoolInformation__information {
+    font-size: 1.4rem;
+  }
+
+  .schoolCourses__list {
+    justify-content: center;
+  }
+
+  .schoolCourses__title {
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 48px;
+    width: 100%;
+  }
+
+  .schoolCourses__name {
+    font-size: 1.4rem;
+  }
+
+  .schoolInformation {
+    padding: 32px 20px;
+  }
+
+  .schoolCourses {
+    padding: 32px 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .schoolProfile__name {
+    font-size: 2.4rem;
+  }
+
+  .schoolCourses__title {
+    font-size: 2.4rem;
+  }
 }

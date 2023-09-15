@@ -4,7 +4,7 @@
 
   async function fetchSchools() {
     try {
-      const result = await fetch("https://api-dianpe.onrender.com/escolas/");
+      const result = await fetch("http://localhost:3000/escolas/");
       return result.json();
     } catch (error) {
       console.error("Erro ao buscar escolas:", error);
@@ -30,7 +30,7 @@
 
     setTimeout(() => {
       if (ESCOLAS.length > 0) {
-        schoolsList = ESCOLAS.map((school) =>
+        const schoolsList = ESCOLAS.map((school) =>
           schoolCardTemplate(
             school.ID,
             school.NOME_INSTITUICAO,
