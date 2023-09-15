@@ -1,5 +1,9 @@
+.hidden {
+  display: none !important;
+}
+
 .schoolProfile {
-  width: 100vw;
+  max-width: 100vw;
 }
 
   .schoolProfile__background {
@@ -8,7 +12,7 @@
     display: flex;
     align-items: end;
     justify-content: center;
-    background-color: aqua;
+    background-color: gray;
   }
 
   .schoolProfile__perfil {
@@ -23,6 +27,7 @@
     border-radius: 100%;
     border: 3px solid #000;
     background: #FFF;
+    margin: 0 auto;
   }
 
   .schoolProfile__name {
@@ -37,7 +42,7 @@
   }
 
 .schoolInformation {
-  background-color: #4db85a80;
+  background-color: rgb(246, 245, 245);
   margin-top: 150px;
   height: 300px;
   padding: 32px 70px;
@@ -100,13 +105,26 @@
   }
 
   .schoolCourses__list {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     list-style: none;
     flex: 1;
     gap: 64px;
   }
 
+.notFound__container {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+  .notFound__img {
+    max-width: 40%;
+  }
+  
 .spinnerContainer {
-  width: 100vw;
+  height: calc(100vh - 80px);
 }

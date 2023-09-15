@@ -70,7 +70,7 @@
 
     .schoolsCardSection__img {
         width: 100%;
-        height: 170px;
+        height: 180px;
     }
 
     .schoolsCardSection__schools {
@@ -83,8 +83,12 @@
     
     .schoolsCardSection__school {
         width: 300px;
-        height: 220px;
+        height: 240px;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        border-radius: 16px;
+        overflow: hidden;
     }
 
     .schoolsCardSection__schoolLink {

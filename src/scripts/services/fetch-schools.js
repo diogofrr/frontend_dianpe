@@ -13,24 +13,24 @@
   }
 
   function schoolCardTemplate(id, schoolName, schoolImg, schoolImgAlt) {
-    return `
-            <a href="school.html?id=${id}" class="schoolsCardSection__schoolLink">
-                <li class="schoolsCardSection__school">
-                    <img class="schoolsCardSection__img" href="${schoolImg}" alt="${schoolImgAlt}" />
-                    <p class="schoolsCardSection__schoolDesc">
-                        <b>${schoolName}</b>
-                    </p>
-                </li>
-            </a>
-        `;
+    return (`
+      <li class="schoolsCardSection__school">
+        <a href="school.html?id=${id}" class="schoolsCardSection__schoolLink">
+          <img class="schoolsCardSection__img" src="${schoolImg}" alt="${schoolImgAlt}" />
+          <p class="schoolsCardSection__schoolDesc">
+            <b>${schoolName}</b>
+          </p>
+        </a>
+      </li>
+    `);
   }
 
   async function renderSchools() {
-    const { schools } = await fetchSchools();
+    const { ESCOLAS } = await fetchSchools();
 
     setTimeout(() => {
-      if (schools.length > 0) {
-        schoolsList = schools.map((school) =>
+      if (ESCOLAS.length > 0) {
+        schoolsList = ESCOLAS.map((school) =>
           schoolCardTemplate(
             school.ID,
             school.NOME_INSTITUICAO,
