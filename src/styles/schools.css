@@ -119,3 +119,15 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 650px) {
+  .subheader {
+    padding: 32px 24px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .subheader {
+    height: 350px;
+  }
+}

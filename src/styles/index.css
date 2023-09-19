@@ -18,11 +18,11 @@
 
 .pageHeader__navItem {
   width: 75px;
-  height: 30px;
+  height: auto;
   text-align: center;
   margin-left: 40px;
   cursor: pointer;
-  margin-top: 16px;
+  position: relative;
 }
 
 .pageHeader__navLink {
@@ -33,8 +33,22 @@
   color: #000;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
 }
+
+.pageHeader__navItem:hover .pageHeader__navLink  {
+  color: var(--laranja-claro);
+}
+
+.pageHeader__navItem:hover .pageHeader__navItem--active::after {
+  background-color: var(--laranja-claro);
+}
+
 
 .pageHeader__navItem:hover {
   color: var(--cor-texto);
@@ -42,7 +56,20 @@
 }
 
 .pageHeader__navItem--active {
-  border-bottom: black solid 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageHeader__navItem--active::after {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  bottom: -8px;
+  width: 100%;
+  animation: surge 0.3s ease-in;
 }
 
 .heroSection {
@@ -59,6 +86,7 @@
   font-family: var(--fonte);
   font-size: 6.4rem;
   font-weight: normal;
+  max-width: 800px;
 }
 
 .heroSection__subtitle {
@@ -108,6 +136,7 @@
 
 .searchBar__inputBar {
   border: 2px solid #ebebeb;
+  border-left: 0px;
   outline: none;
   height: 47px;
   width: 50vw;
@@ -125,17 +154,19 @@
 
 .searchBar__inputContainer {
   display: flex;
+  flex-direction: row-reverse;
 }
 
 .searchBar__inputButton {
-  background-color: #ebebeb;
+  background-color: transparent;
   border: 2px solid #ebebeb;
+  border-right: 0px;
 }
 
 .searchBar__inputButtonIcon {
   height: 24px;
   padding: 0 8px;
-  color: var(--cor-texto);
+  color: #ebebeb;
 }
 
 .cardSection {
@@ -471,5 +502,112 @@
   .card__cardSchoolImage,
   .card__cardCourseImage {
     height: 350px;
+  }
+
+  .heroSection {
+    padding: 0 20px;
+  }
+
+  .heroSection__title {
+    font-size: 4.8rem;
+  }
+
+  .heroSection__subtitle {
+    font-size: 2rem;
+  }
+
+  .whySection {
+    padding: 70px 20px;
+  }
+
+  .whySection__articleTitle {
+    font-size: 3.6rem;
+  }
+
+  .whySection__articleParagraph, .whySection__articleListLabel, .whySection__articleLink, .pageFooter__text {
+    font-size: 1.2rem;
+  }
+
+  .authorsSection {
+    padding: 48px 20px;
+  }
+
+  .authorsSection__title {
+    font-size: 3.6rem;
+  }
+  
+  .heroSection__searchBar {
+    flex-direction: column;
+  }
+
+  .searchBar__select {
+    width: 100%;
+    text-align: center;
+  }
+
+  .searchBar__inputBar {
+    width: 100%;
+  }
+
+  .cardSection__card {
+    height: 340px;
+    width: 280px;
+  }
+
+  .card__cardSchoolImage, .card__cardCourseImage {
+    height: 290px;
+  }
+
+  .card__cardTitle {
+    font-size: 2.4rem;
+  }
+
+  .authorsSection__card {
+    min-width: 280px;
+    height: 340px;
+  }
+
+  .authorsSection__cardImg {
+    width: 150px;
+    height: 150px;
+    bottom: -20%;
+  }
+
+  .authorsSection__cardImgContainer{
+    height: 150px;
+  }
+
+  .authorsSection__cardDescContainer {
+    margin-top: 48px;
+  }
+
+  .authorsSection__cardIcons {
+    margin-top: 24px;
+    gap: 24px;
+  }
+
+  .pageHeader__navLink  {
+    font-size: 1.6rem !important;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .heroSection__title {
+    font-size: 3.6rem;
+  }
+
+  .whySection__overlay, .whySection__video {
+    width: 300px;
+  }
+}
+
+
+@keyframes surge {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
   }
 }
