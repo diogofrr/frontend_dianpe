@@ -69,7 +69,11 @@
   position: absolute;
   bottom: -8px;
   width: 100%;
-  animation: surge 0.3s ease-in;
+  animation: surgeBar 0.3s ease-in;
+}
+
+.heroSection > * {
+  animation: surge 0.5s ease-in;
 }
 
 .heroSection {
@@ -602,12 +606,22 @@
   }
 }
 
-
-@keyframes surge {
+@keyframes surgeBar {
   0% {
     transform: scaleX(0);
   }
   100% {
     transform: scaleX(1);
+  }
+}
+
+@keyframes surge {
+  0% {
+    transform: translateX(-5%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

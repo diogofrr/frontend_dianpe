@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS-->
+    <link rel="stylesheet" href="../styles/global-style.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <link rel="stylesheet" href="../styles/schools.css" />
+    <link rel="stylesheet" href="../styles/spinner.css" />
+    <link rel="stylesheet" href="../styles/hamburguer.css" />
+    <!-- <link rel="shortcut icon" href="./assets/dianpe.ico" type="image/x-icon"> -->
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dianpe</title>
+  </head>
+  <body>
+    <header class="pageHeader">
+      <a href="../index.html">
+        <img
+          class="pageHeader__logo"
+          src="../../public/logo-dianpe.png"
+          alt="Logotipo da startup DIANPE"
+        />
+      </a>
+      <nav class="pageHeader__pagesNav">
+        <ul class="pageHeader__navList" id="menu">
+          <li class="pageHeader__navItem">
+            <a href="../index.html" class="pageHeader__navLink"> Início </a>
+          </li>
+          <li class="pageHeader__navItem pageHeader__navItem--active">
+            <a href="./schools.html" class="pageHeader__navLink">
+              Escolas
+            </a>
+          </li>
+          <li class="pageHeader__navItem">
+            <a href="#" class="pageHeader__navLink"> Cursos </a>
+          </li>
+          <li class="pageHeader__navItem">
+            <a href="#" class="pageHeader__navLink"> Sugestões </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="hamburguerIcon" id="hamburguerIcon" aria-expanded="false">
+        <div class="hamburguerIcon__line1"></div>
+        <div class="hamburguerIcon__line2"></div>
+        <div class="hamburguerIcon__line3"></div>
+      </div>
+    </header>
+    <section class="subheader">
+      <div class="subheader__breadcrumb">
+        <a href="../index.html" class="breadcrumb__link">Início </a>
+        <span class="breadcrumb__arrow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="breadcrumb__arrow"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </span>
+        <span class="breadcrumb__linkActual">Escolas</span>
+      </div>
+      <h1 class="subheader__title">Escolas</h1>
+      <p class="subheader__description">
+        Nossa plataforma fornece informações detalhadas sobre diversas
+        instituições educacionais que oferecem cursos técnicos de alta qualidade
+        em áreas como tecnologia da informação, engenharia, saúde e muito mais.
+      </p>
+    </section>
+    <main>
+      <section class="schoolsCardSection">
+        <ul class="schoolsCardSection__schools" id="schools__list"></ul>
+        <div class="spinnerContainer" id="schools-spinner">
+          <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../scripts/services/fetch-schools.js"></script>
+    <script src="../scripts/navbar.js"></script>
+  </body>
+</html>
