@@ -1,0 +1,94 @@
+.subheader {
+  background-color: var(--verde-claro);
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 70px;
+}
+
+.subheader__breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 4px;
+  margin-bottom: 32px;
+}
+
+.breadcrumb__arrow {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.breadcrumb__link {
+  color: var(--cor-texto);
+  font-family: var(--fonte);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.breadcrumb__linkActual {
+  color: #000;
+  font-family: var(--fonte);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.subheader__title {
+  color: #000;
+  font-family: var(--fonte);
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  margin-bottom: 16px;
+}
+
+.subheader__description {
+  color: #636466;
+  font-family: var(--fonte);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.3px;
+  max-width: 700px;
+}
+
+.coursesCardSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 70px;
+}
+
+.typeCoursesCategory {
+  width: 100%;
+}
+
+.spinnerContainer {
+  height: calc(100vh - 450px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 650px) {
+  .subheader {
+    padding: 32px 24px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .subheader {
+    height: 350px;
+  }
+}
