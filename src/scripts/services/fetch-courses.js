@@ -1,5 +1,5 @@
 (function () {
-  const schoolsHtmlList = document.getElementById("courses__list");
+  const coursesHtmlList = document.getElementById("courses__list");
   const spinner = document.getElementById("courses-spinner");
 
   async function fetchSchools() {

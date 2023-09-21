@@ -73,6 +73,24 @@
   width: 100%;
 }
 
+.typeCoursesCategory__categoryTitle {
+  color: #000;
+  font-family: var(--fonte);
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.6px;
+  margin-bottom: 24px;
+}
+
+.carousel-cell {
+  width: 300px;
+  height: 350px;
+  background-color: gray;
+  margin-right: 20px;
+}
+
 .spinnerContainer {
   height: calc(100vh - 450px);
   width: 100%;
