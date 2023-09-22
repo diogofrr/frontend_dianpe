@@ -98,6 +98,15 @@
 .main-carousel {
   display: flex;
   overflow-x: auto;
+  flex-shrink: 0;
+  padding: 8px 2px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.main-carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel-cell {
@@ -109,29 +118,35 @@
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+.main-carousel:hover .carousel-btn {
+  opacity: 1;
+} 
+
 .carousel-btn {
   min-width: 48px;
-  height: 48px;
-  position: absolute;
   top: 50%;
   outline: none;
   border: none;
-  border-radius: 100%;
-  background-color: transparent;
+  background-color: t;
   z-index: 20;
   cursor: pointer;
+  position: absolute;
+  opacity: 0.1;
+  transition: all 300ms ease-in-out;
 }
 
 .arrow-icon {
-  color: black;
+  color: white;
 }
 
-#rightButton {
-  right: 50px;
+.rightButton {
+  right: 45px;
+  background: linear-gradient(to right, transparent 0%, black 200%);
 }
 
-#leftButton {
-  left: 50px;
+.leftButton {
+  left: 45px;
+  background: linear-gradient(to left, transparent 0%, black 200%);
 }
 
 .flickity-viewport {

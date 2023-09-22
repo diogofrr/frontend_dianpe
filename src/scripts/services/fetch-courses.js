@@ -9,6 +9,18 @@
     return colors[random]
   }
 
+  function startCarousel() {
+    const rightButton = document.getElementById('rightButton');
+    const leftButton = document.getElementById('leftButton');
+  
+    let currentItem = 0;
+    const items = document.querySelectorAll('.carousel-cell');
+    const maxItems = items.length;
+  
+    rightButton.addEventListener('click', () => console.log('direita'))
+    leftButton.addEventListener('click', () => console.log('esquerda'))
+  }
+
   function startLoading() {
     spinner.style.display = 'block'
   }
@@ -72,15 +84,19 @@
 
     // Right Button
     const rightButton = document.createElement('button');
-    rightButton.classList.add('carousel-btn')
-    rightButton.id = 'rightButton'
-    rightButton.appendChild(rightArrowIcon)
+    rightButton.classList.add('carousel-btn');
+    rightButton.classList.add('rightButton');
+    rightButton.appendChild(rightArrowIcon);
 
     // Left Button
     const leftButton = document.createElement('button');
-    leftButton.classList.add('carousel-btn')
-    leftButton.id = 'leftButton'
-    leftButton.appendChild(leftArrowIcon)
+    leftButton.classList.add('carousel-btn');
+    leftButton.classList.add('leftButton');
+    leftButton.appendChild(leftArrowIcon);
+
+    // Carousel controls
+    const buttonsContainer = document.createElement('div');
+    buttonsContainer.classList.add('carousel-controls')
 
     // Container
     const categoryElement = document.createElement('div');
@@ -102,8 +118,9 @@
   
     categoryElement.appendChild(categoryTitleElement);
     categoryElement.appendChild(coursesListElement);
-    coursesListElement.appendChild(leftButton);
-    coursesListElement.appendChild(rightButton);
+    buttonsContainer.appendChild(leftButton);
+    buttonsContainer.appendChild(rightButton);
+    coursesListElement.appendChild(buttonsContainer)
 
     return categoryElement;
   }
