@@ -1,3 +1,5 @@
+import loadCarouselDOM from '../carousel.js'
+
 (function () {
   const coursesHtmlList = document.getElementById("courses__list");
   const spinner = document.getElementById("courses-spinner");
@@ -39,7 +41,7 @@
 
   async function fetchCourses() {
     try {
-      const result = await fetch("http://localhost:3000/cursos/");
+      const result = await fetch("https://api-dianpe.onrender.com/cursos/");
       return result.json();
     } catch (error) {
       console.error("Erro ao buscar escolas:", error);
@@ -110,6 +112,7 @@
     // Category List
     const coursesListElement = document.createElement('ul');
     coursesListElement.classList.add('typeCoursesCategory__courses', 'main-carousel');
+    coursesListElement.setAttribute('data-active', 0);
   
     courseList.forEach((course) => {
       const courseCardElement = createCourseCardElement(course.ID, course.NOME, course.IMG_URL);
@@ -166,6 +169,7 @@
   
     stopLoading();
     showList();
+    loadCarouselDOM()
   }
 
   renderCourses();

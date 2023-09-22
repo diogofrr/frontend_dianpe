@@ -208,11 +208,11 @@
     padding: 32px 20px 64px 20px;
   }
 
-  #rightButton {
+  .rightButton {
     right: 0;
   }
   
-  #leftButton {
+  .leftButton {
     left: 0;
   }
   

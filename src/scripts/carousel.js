@@ -1,43 +1,76 @@
-(function(){
-  // Variável que rastreia o índice atual do elemento no carrossel
-  let currentItem = 0;
+function loadCarouselDOM() {
+  const carouselList = document.querySelectorAll('.main-carousel');
 
-  // Adiciona um ouvinte de evento de clique ao documento
-  document.addEventListener('click', (e) => {
-    // Se o clique foi no botão de seta direita, avance para o próximo elemento
-    if (rightArrow){
-      changeElement('right');
-    }
-    // Se o clique foi no botão de seta esquerda, volte para o elemento anterior
-    else if (leftArrow) {
-      changeElement('left');
-    }
-  });
+  carouselList.forEach((carousel) => {
+    const childs = carousel.querySelectorAll('.carousel-cell');
+    const rightButton = carousel.querySelector('.rightButton');
+    const leftButton = carousel.querySelector('.leftButton');
 
-  // Função para alterar o elemento atual com base na direção
-  function changeElement(direction) {
-    // Obtém todos os elementos do carrossel
-    const items = document.querySelectorAll('.main-carousel');
-    // Obtém o número total de elementos no carrossel
-    const maxItems = items.length;
+    rightButton.addEventListener('click', () => {
+      changeElement(carousel, 'right', childs.length, Number(carousel.dataset.active), childs)
+    })
 
-    console.log('currentItem: ' + currentItem + '- maxItems: ' + maxItems);
+    leftButton.addEventListener('click', (e) => {
+      changeElement(carousel, 'left', childs.length, Number(carousel.dataset.active), childs)
+    })
+  })
+}
 
-    // Atualiza o índice do elemento com base na direção
-    if (direction === 'left') {
-      currentItem--;
-    } else {
-      currentItem++;
-    }
+function changeElement(carouselRef, direction, maxItems, currentItem, childs) {
+  let visibleItems;
+  const width = document.body.clientWidth;
+  let updatedCurrentItem = currentItem
 
-    // Lida com os casos de ultrapassagem dos limites do carrossel
-    if (currentItem >= maxItems) {
-      currentItem = 0;
-    }
-
-    if (currentItem < 0) {
-      currentItem = maxItems - 1;
-    }
+  if (width >= 1800) {
+    visibleItems = 5;
+  } else if (width >= 1440) {
+    visibleItems = 4;
+  } else if (width >= 1148) {
+    visibleItems = 3;
+  } else if (width >= 800) {
+    visibleItems = 2;
+  } else {
+    visibleItems = 1;
   }
 
-}())
+  // Atualiza o índice do elemento com base na direção
+  if (direction === 'left') {
+    const backValue = updatedCurrentItem -= visibleItems;
+    
+    if (backValue <= maxItems) {
+      visibleItems = maxItems - 1 
+    } else {
+      visibleItems = 0
+    }
+  } else {
+    updatedCurrentItem += visibleItems;
+  }
+  
+  // Lida com os casos de ultrapassagem dos limites do carrossel
+  if (updatedCurrentItem >= maxItems) {
+    updatedCurrentItem = 0;
+  }
+  
+  if (updatedCurrentItem < 0) {
+    updatedCurrentItem = maxItems - 1;
+  }
+
+  carouselRef.setAttribute('data-active', updatedCurrentItem)
+  childs[updatedCurrentItem].scrollIntoView({
+    inline: 'start',
+    block: 'nearest',
+    behavior: 'smooth'
+  });
+
+  console.log(`
+    Direction: ${direction}
+    MaxItems: ${maxItems}
+    CurrentItem: ${currentItem}
+    UpdatedCurrentItem: ${updatedCurrentItem}
+    CarouselRef: ${carouselRef}
+    Childs: ${childs}
+    Width: ${width}
+  `)
+}
+
+export default loadCarouselDOM;
