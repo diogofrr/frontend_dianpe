@@ -50,10 +50,10 @@
 }
 
 
-.pageHeader__navItem:hover {
+/* .pageHeader__navItem:hover {
   color: var(--cor-texto);
   border-color: var(--cor-texto);
-}
+} */
 
 .pageHeader__navItem--active {
   display: flex;
