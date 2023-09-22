@@ -83,6 +83,14 @@
   flex-direction: column;
   justify-content: center;
   padding: 0 70px;
+  position: relative;
+}
+
+.heroSection__student {
+  position: absolute;
+  right: 70px;
+  bottom: 0px;
+  width: 300px;
 }
 
 .heroSection__title {
@@ -190,6 +198,13 @@
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
   display: flex;
   flex-direction: column;
+  transition-duration: 0.3s;
+}
+
+.cardSection__card:hover { 
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+  transition-duration: 0.9s;
 }
 
 .cardSection__link {
@@ -204,14 +219,14 @@
 }
 
 .card__cardSchoolImage {
-  background-image: url("../../public/imgs/estudante-em-khudi-vermelho-em-pe-olhando-para-a-camera.jpg");
+  background-image: url("../../public/imgs/escolas.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 
 .card__cardCourseImage {
-  background-image: url("../../public/imgs/estudante-em-khudi-vermelho-em-pe-olhando-para-a-camera.jpg");
+  background-image: url("../../public/imgs/cursos.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -257,10 +272,12 @@
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: calc(1.6rem * 1.5);
   letter-spacing: 0.8px;
   padding-bottom: 2.4rem;
-  max-width: 64rem;
+  max-width: 70rem;
+  text-align: justify;
+  text-indent: 25px;
 }
 
 .whySection__articleListLabel {
@@ -449,6 +466,10 @@
 
   .whySection__articleTitle {
     text-align: center;
+  }
+
+  .heroSection__student {
+    display: none;
   }
 }
 
