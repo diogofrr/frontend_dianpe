@@ -6,9 +6,10 @@
     <!--CSS-->
     <link rel="stylesheet" href="../styles/global-style.css" />
     <link rel="stylesheet" href="../styles/index.css" />
-    <link rel="stylesheet" href="../styles/schools.css" />
+    <link rel="stylesheet" href="../styles/courses.css" />
     <link rel="stylesheet" href="../styles/spinner.css" />
     <link rel="stylesheet" href="../styles/hamburguer.css" />
+    <link rel="stylesheet" href="../styles/flickity.css" />
     <!-- <link rel="shortcut icon" href="./assets/dianpe.ico" type="image/x-icon"> -->
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,13 +34,13 @@
           <li class="pageHeader__navItem">
             <a href="../index.html" class="pageHeader__navLink"> Início </a>
           </li>
-          <li class="pageHeader__navItem pageHeader__navItem--active">
+          <li class="pageHeader__navItem">
             <a href="./schools.html" class="pageHeader__navLink">
               Escolas
             </a>
           </li>
-          <li class="pageHeader__navItem">
-            <a href="#" class="pageHeader__navLink"> Cursos </a>
+          <li class="pageHeader__navItem pageHeader__navItem--active">
+            <a href="./courses.htmt" class="pageHeader__navLink"> Cursos </a>
           </li>
           <li class="pageHeader__navItem">
             <a href="#" class="pageHeader__navLink"> Sugestões </a>
@@ -71,30 +72,43 @@
             />
           </svg>
         </span>
-        <span class="breadcrumb__linkActual">Escolas</span>
+        <span class="breadcrumb__linkActual">Cursos</span>
       </div>
-      <h1 class="subheader__title">Escolas</h1>
+      <h1 class="subheader__title">Cursos</h1>
       <p class="subheader__description">
-        Nossa plataforma fornece informações detalhadas sobre diversas
-        instituições educacionais que oferecem cursos técnicos de alta qualidade
-        em áreas como tecnologia da informação, engenharia, saúde e muito mais.
+        Fazer um curso profissionalizante é a chave para desbloquear novas oportunidades
+        e avançar em sua carreira. Nossos cursos oferecem conhecimento prático e especializado,
+        capacitando você a se destacar em sua área de atuação e a alcançar o sucesso profissional que você merece.
       </p>
     </section>
     <main>
-      <section class="schoolsCardSection">
-        <ul class="schoolsCardSection__schools" id="schools__list"></ul>
-        <div class="spinnerContainer" id="schools-spinner">
+      <section class="coursesCardSection">
+        <div class="typeCoursesCategory">
+          <p class="typeCoursesCategory__categoryTitle">Tecnologia</p>
+          <ul class="typeCoursesCategory__courses main-carousel" id="courses__list"  data-flickity='{ "cellAlign": "left", "contain": true }'>
+            <li class="carousel-cell">
+              <a href="${id}" class="courses__link">
+                <img class="courses__img" src="${courseImg}" alt="${courseImgAlt}" />
+                <p class="schoolCourses__name">
+                  ${courseName}
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="spinnerContainer" id="courses-spinner">
           <div class="lds-ring">
             <div></div>
             <div></div>
             <div></div>
             <div></div>
           </div>
-        </div>
+        </div> -->
       </section>
     </main>
 
-    <script src="../scripts/services/fetch-schools.js"></script>
+    <script src="../scripts/services/fetch-courses.js"></script>
     <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/flickity.pkgd.min.js"></script>
   </body>
 </html>
