@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="../styles/courses.css" />
     <link rel="stylesheet" href="../styles/spinner.css" />
     <link rel="stylesheet" href="../styles/hamburguer.css" />
-    <link rel="stylesheet" href="../styles/flickity.css" />
-    <!-- <link rel="shortcut icon" href="./assets/dianpe.ico" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="../../public/favicon-32x32.png" type="image/x-icon">
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+
     <title>Dianpe</title>
   </head>
   <body>
@@ -82,33 +82,18 @@
       </p>
     </section>
     <main>
-      <section class="coursesCardSection">
-        <div class="typeCoursesCategory">
-          <p class="typeCoursesCategory__categoryTitle">Tecnologia</p>
-          <ul class="typeCoursesCategory__courses main-carousel" id="courses__list"  data-flickity='{ "cellAlign": "left", "contain": true }'>
-            <li class="carousel-cell">
-              <a href="${id}" class="courses__link">
-                <img class="courses__img" src="${courseImg}" alt="${courseImgAlt}" />
-                <p class="schoolCourses__name">
-                  ${courseName}
-                </p>
-              </a>
-            </li>
-          </ul>
+      <section class="coursesCardSection" id="courses__list"></section>
+      <div class="spinnerContainer" id="courses-spinner">
+        <div class="lds-ring">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <!-- <div class="spinnerContainer" id="courses-spinner">
-          <div class="lds-ring">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div> -->
-      </section>
+      </div>
     </main>
 
-    <script src="../scripts/services/fetch-courses.js"></script>
     <script src="../scripts/navbar.js"></script>
-    <script src="../scripts/flickity.pkgd.min.js"></script>
+    <script src="../scripts/services/fetch-courses.js"></script>
   </body>
 </html>
