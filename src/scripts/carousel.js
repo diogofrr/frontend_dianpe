@@ -16,11 +16,12 @@ function loadCarouselDOM() {
   })
 }
 
-function changeElement(carouselRef, direction, maxItems, currentItem, childs, rightButton, leftButton) {
+function changeElement(carouselRef, direction, maxItems, currentItem, childs) {
   let visibleItems;
   const width = document.body.clientWidth;
   let updatedCurrentItem = currentItem
 
+  // DEFINE A QUANTIDADE DE ELEMENTOS VISÍVEIS NA TELA
   if (width >= 1800) {
     visibleItems = 5;
   } else if (width >= 1440) {
@@ -46,7 +47,11 @@ function changeElement(carouselRef, direction, maxItems, currentItem, childs, ri
   }
   
   if (updatedCurrentItem < 0) {
-    updatedCurrentItem = visibleItems // maxitems - 1;
+    if (visibleItems >= 4) {
+      updatedCurrentItem = visibleItems;
+    } else {
+      updatedCurrentItem = maxItems - 1;
+    }
   }
 
   carouselRef.setAttribute('data-active', updatedCurrentItem)
@@ -55,16 +60,16 @@ function changeElement(carouselRef, direction, maxItems, currentItem, childs, ri
     block: 'nearest',
     behavior: 'smooth'
   });
-
-  console.log(`
-    Direction: ${direction}
-    MaxItems: ${maxItems}
-    CurrentItem: ${currentItem}
-    UpdatedCurrentItem: ${updatedCurrentItem}
-    CarouselRef: ${carouselRef}
-    Childs: ${childs}
-    Width: ${width}
-  `)
+  // DEBUG
+  // console.log(`
+  //   Direction: ${direction}
+  //   MaxItems: ${maxItems}
+  //   CurrentItem: ${currentItem}
+  //   UpdatedCurrentItem: ${updatedCurrentItem}
+  //   CarouselRef: ${carouselRef}
+  //   Childs: ${childs}
+  //   Width: ${width}
+  // `)
 }
 
 export default loadCarouselDOM;
