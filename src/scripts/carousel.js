@@ -7,16 +7,16 @@ function loadCarouselDOM() {
     const leftButton = carousel.querySelector('.leftButton');
 
     rightButton.addEventListener('click', () => {
-      changeElement(carousel, 'right', childs.length, Number(carousel.dataset.active), childs)
+      changeElement(carousel, 'right', childs.length, Number(carousel.dataset.active), childs, rightButton, leftButton)
     })
 
     leftButton.addEventListener('click', (e) => {
-      changeElement(carousel, 'left', childs.length, Number(carousel.dataset.active), childs)
+      changeElement(carousel, 'left', childs.length, Number(carousel.dataset.active), childs, rightButton, leftButton)
     })
   })
 }
 
-function changeElement(carouselRef, direction, maxItems, currentItem, childs) {
+function changeElement(carouselRef, direction, maxItems, currentItem, childs, rightButton, leftButton) {
   let visibleItems;
   const width = document.body.clientWidth;
   let updatedCurrentItem = currentItem
@@ -35,13 +35,7 @@ function changeElement(carouselRef, direction, maxItems, currentItem, childs) {
 
   // Atualiza o índice do elemento com base na direção
   if (direction === 'left') {
-    const backValue = updatedCurrentItem -= visibleItems;
-    
-    if (backValue <= maxItems) {
-      visibleItems = maxItems - 1 
-    } else {
-      visibleItems = 0
-    }
+    updatedCurrentItem -= visibleItems;
   } else {
     updatedCurrentItem += visibleItems;
   }
@@ -52,7 +46,7 @@ function changeElement(carouselRef, direction, maxItems, currentItem, childs) {
   }
   
   if (updatedCurrentItem < 0) {
-    updatedCurrentItem = maxItems - 1;
+    updatedCurrentItem = visibleItems // maxitems - 1;
   }
 
   carouselRef.setAttribute('data-active', updatedCurrentItem)
