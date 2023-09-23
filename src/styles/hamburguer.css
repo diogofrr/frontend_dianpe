@@ -42,6 +42,10 @@
 }
 
 @media screen and (max-width: 980px) {
+  .pageHeader__navItem--active::after {
+    display: none;
+  }
+
   .pageHeader__navList {
     width: 100vw;
     height: 0;
@@ -60,9 +64,12 @@
 
   .pageHeader__navItem {
     width: 100%;
-    min-height: calc(25vh - 20px);
+    min-height: calc(33vh - 20px);
     margin: 0;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .pageHeader__navLink {
