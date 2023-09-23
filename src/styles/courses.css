@@ -63,15 +63,17 @@
 }
 
 .coursesCardSection {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .typeCoursesCategory {
   width: 100%;
   padding: 32px 70px 64px 70px;
+  position: relative;
 }
 
 .typeCoursesCategory:nth-child(2n) {
@@ -93,13 +95,58 @@
   margin-bottom: 24px;
 }
 
+.main-carousel {
+  display: flex;
+  overflow-x: auto;
+  flex-shrink: 0;
+  padding: 8px 2px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.main-carousel::-webkit-scrollbar {
+  display: none;
+}
+
 .carousel-cell {
-  width: 300px;
-  height: 360px;
+  min-width: 300px;
+  min-height: 360px;
   margin-right: 20px;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.main-carousel:hover .carousel-btn {
+  opacity: 1;
+} 
+
+.carousel-btn {
+  min-width: 48px;
+  top: 50%;
+  outline: none;
+  border: none;
+  background-color: t;
+  z-index: 20;
+  cursor: pointer;
+  position: absolute;
+  opacity: 0.1;
+  transition: all 300ms ease-in-out;
+}
+
+.arrow-icon {
+  color: white;
+}
+
+.rightButton {
+  right: 45px;
+  background: linear-gradient(to right, transparent 0%, black 200%);
+}
+
+.leftButton {
+  left: 45px;
+  background: linear-gradient(to left, transparent 0%, black 200%);
 }
 
 .flickity-viewport {
@@ -145,7 +192,7 @@
 }
 
 .spinnerContainer {
-  height: calc(100vh - 450px);
+  height: calc(100vh - 380px);
   width: 100%;
   display: flex;
   align-items: center;
@@ -160,6 +207,15 @@
   .typeCoursesCategory {
     padding: 32px 20px 64px 20px;
   }
+
+  .rightButton {
+    right: 0;
+  }
+  
+  .leftButton {
+    left: 0;
+  }
+  
 }
 
 @media screen and (max-width: 500px) {
