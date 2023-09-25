@@ -41,7 +41,7 @@ import loadCarouselDOM from '../carousel.js'
 
   async function fetchCourses() {
     try {
-      const result = await fetch("https://api-dianpe.onrender.com/cursos/");
+      const result = await fetch("http://localhost:3000/cursos/");
       return result.json();
     } catch (error) {
       console.error("Erro ao buscar escolas:", error);
@@ -138,7 +138,7 @@ import loadCarouselDOM from '../carousel.js'
   
     // Link Element
     const linkElement = document.createElement('a');
-    linkElement.href = id;
+    linkElement.href = `course.html?id=${id}`;
     linkElement.classList.add('courses__link');
   
     // Image Element

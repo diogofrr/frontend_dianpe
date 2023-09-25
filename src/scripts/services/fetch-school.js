@@ -8,6 +8,7 @@
   const coursesProfile = document.getElementById('school-profile');
   const notFound = document.getElementById('not-found');
   const courseListHtml= document.getElementById('courses__list');
+  const footer = document.getElementById('footer');
 
   if (!id) {
     notFound.classList.remove('hidden');
@@ -17,7 +18,7 @@
 
   async function fetchSchoolData() {
     try {
-      const result = await fetch(`https://api-dianpe.onrender.com/escolas/${id}`);
+      const result = await fetch(`http://localhost:3000/escolas/${id}`);
       return result.json();
     } catch (error) {
       console.error("Erro ao buscar escolas:", error);
@@ -29,7 +30,7 @@
   function courseTemplate(id, courseName, courseImg, courseImgAlt) {
     return `
       <li class="schoolCourses__course">
-        <a href="${id}" class="schoolCourses__link">
+        <a href="course.html?id=${id}" class="schoolCourses__link">
           <img class="schoolCourses__img" src="${courseImg}" alt="${courseImgAlt}" />
           <p class="schoolCourses__name">
             ${courseName}
@@ -73,13 +74,14 @@
       coursesSpinner.classList.add('hidden');
     } else {
       renderData(response);      
-      const courseList = response.CURSOS.map((curso) => courseTemplate(curso.ID, curso.NOME, curso.IMG_URL, `Imagem ilustrativa do curso ${curso.NOME}`));
+      const courseList = response.CURSOS.map((course) => courseTemplate(course.ID, course.NOME, course.IMG_URL, `Imagem ilustrativa do curso ${course.NOME}`));
       courseList.forEach((course) => {
         courseListHtml.innerHTML += course;
       });
       changeBackgroundColor()
       coursesProfile.classList.remove('hidden');
       coursesSpinner.classList.add('hidden');
+      footer.classList.remove('hidden')
     }
   }
 

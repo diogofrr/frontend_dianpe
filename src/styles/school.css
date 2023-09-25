@@ -4,47 +4,48 @@
 
 .schoolProfile {
   max-width: 100vw;
+  margin-top: 80px;
 }
 
-  .schoolProfile__background {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    background-color: lightgray;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.schoolProfile__background {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  background-color: lightgray;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .schoolProfile__perfil {
-    position: relative;
-    top: 125px;
-  }
+.schoolProfile__perfil {
+  position: relative;
+  top: 125px;
+}
 
-  .schoolProfile__picture {
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
-    border: 3px solid #000;
-    margin: 0 auto;
-    background-color: gray;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.schoolProfile__picture {
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  border: 3px solid #000;
+  margin: 0 auto;
+  background-color: gray;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .schoolProfile__name {
-    color: #000;
-    font-family: var(--fonte);
-    font-size: 3.2rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-top: 16px;
-    text-align: center;
-  }
+.schoolProfile__name {
+  color: #000;
+  font-family: var(--fonte);
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 16px;
+  text-align: center;
+}
 
 .schoolInformation {
   background-color: rgb(246, 245, 245);
@@ -53,43 +54,43 @@
   padding: 32px 70px;
 }
 
-  .schoolInformation__title {
-    color: #000;
-    font-family: var(--fonte);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
+.schoolInformation__title {
+  color: #000;
+  font-family: var(--fonte);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 
-  .schoolInformation__list {
-    list-style: none;
-    margin-top: 32px;
-    width: 100%;
-  }
+.schoolInformation__list {
+  list-style: none;
+  margin-top: 32px;
+  width: 100%;
+}
 
-  .schoolInformation__listItem {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 8px;
-    margin: 16px 0;
-    width: 100%;
-  }
+.schoolInformation__listItem {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  margin: 16px 0;
+  width: 100%;
+}
 
-  .schoolInformation__icon {
-    width: 32px;
-    height: 32px;
-  }
+.schoolInformation__icon {
+  width: 32px;
+  height: 32px;
+}
 
-  .schoolInformation__information {
-    color: #000;
-    font-family: var(--fonte);
-    font-size: 1.6rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
+.schoolInformation__information {
+  color: #000;
+  font-family: var(--fonte);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
 .schoolCourses {
   display: flex;
@@ -98,84 +99,86 @@
   padding: 32px 70px;
 }
 
-  .schoolCourses__title {
-    color: #000;
-    font-family: var(--fonte);
-    font-size: 2.8rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 32px;
-  }
-
-  .schoolCourses__course {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    width: 300px;
-    height: 360px;
-    border-radius: 16px;
-    overflow: hidden;
-  }
-
-  .schoolCourses__list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: start;
-    list-style: none;
-    flex: 1;
-    gap: 64px;
-  }
-
-  .schoolCourses__link {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-
-  .schoolCourses__name {
-    width: 100%;
-    background-color: white;
-    padding: 8px 0;
-    text-align: center;
-    color: #000;
-    font-family: var(--fonte);
-    font-size: 1.6rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    z-index: 2;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .schoolCourses__img {
-    position: relative;
-    top: 2px;
-    z-index: 1;
-    max-width: 100%;
-  }
-
-.notFound__container {
-width: 100%;
-height: calc(100vh - 80px);
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+.schoolCourses__title {
+  color: #000;
+  font-family: var(--fonte);
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 32px;
 }
 
-  .notFound__img {
-    max-width: 40%;
-  }
-    
+.schoolCourses__course {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 300px;
+  height: 360px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.schoolCourses__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  list-style: none;
+  flex: 1;
+  gap: 64px;
+}
+
+.schoolCourses__link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.schoolCourses__name {
+  width: 100%;
+  background-color: white;
+  padding: 8px 0;
+  text-align: center;
+  color: #000;
+  font-family: var(--fonte);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schoolCourses__img {
+  position: relative;
+  top: 2px;
+  z-index: 1;
+  max-width: 100%;
+}
+
+.notFound__container {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.notFound__img {
+  max-width: 40%;
+}
+
 .spinnerContainer {
   height: calc(100vh - 80px);
+  margin-top: 80px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -190,7 +193,7 @@ flex-direction: column;
   }
 
   .schoolInformation__title {
-    font-size: 2.0rem;
+    font-size: 2rem;
   }
 
   .schoolInformation__information {
@@ -211,6 +214,10 @@ flex-direction: column;
   .schoolCourses__name {
     font-size: 1.6rem;
   }
+  
+  .notFound__img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -219,13 +226,12 @@ flex-direction: column;
     height: 300px;
   }
 
-
   .schoolProfile__name {
     font-size: 2.4rem;
   }
 
   .schoolInformation__title {
-    font-size: 2.0rem;
+    font-size: 2rem;
   }
 
   .schoolInformation__information {

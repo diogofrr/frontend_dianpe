@@ -5,7 +5,8 @@
     display: flex;
     flex-direction: column;
     padding: 32px 70px;
-}
+    margin-top: 80px;
+  }
 
     .subheader__breadcrumb {
         display: flex;
@@ -120,14 +121,34 @@
     justify-content: center;
 }
 
-@media screen and (max-width: 650px) {
-  .subheader {
-    padding: 32px 24px;
+@media screen and (max-width: 1600px) {
+  .schoolsCardSection__schools{ 
+    justify-content: center;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .subheader {
-    height: 350px;
+    padding: 32px 24px;
+    height: 250px;
+  }
+
+  .breadcrumb__link, .breadcrumb__linkActual, .breadcrumb__arrow {
+    font-size: 1.2rem;
+  }
+
+  .subheader__title {
+    font-size: 3.6rem;
+  }
+
+  .subheader__description {
+    font-size: 1.2rem;
+  }
+
+
+  .schoolsCardSection__schoolDesc {
+    max-width: 200px;
+    margin: auto;
+    font-size: 1.4rem;
   }
 }

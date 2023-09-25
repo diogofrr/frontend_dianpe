@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   padding: 32px 70px;
+  margin-top: 80px;
 }
 
 .subheader__breadcrumb {
@@ -202,6 +203,7 @@
 @media screen and (max-width: 650px) {
   .subheader {
     padding: 32px 24px;
+    height: 270px;
   }
 
   .typeCoursesCategory {
@@ -216,10 +218,24 @@
     left: 0;
   }
   
-}
+  .breadcrumb__link, .breadcrumb__linkActual, .breadcrumb__arrow {
+    font-size: 1.2rem;
+  }
 
-@media screen and (max-width: 500px) {
-  .subheader {
-    height: 390px;
+  .subheader__title {
+    font-size: 3.6rem;
+  }
+
+  .subheader__description {
+    font-size: 1.2rem;
+  }
+
+  .typeCoursesCategory__categoryTitle{
+    font-size: 2.4rem;
+  }
+
+  .courses__name {
+    font-size: 1.4rem;
   }
 }
+
