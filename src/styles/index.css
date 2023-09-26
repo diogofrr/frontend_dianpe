@@ -394,6 +394,10 @@
   background-color: var(--verde-claro);
 }
 
+.authorsSection__cardImgContainer--bg-gray {
+  background-color: gray;
+}
+
 .authorsSection__cardImg {
   border-radius: 100%;
   width: 200px;
