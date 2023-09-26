@@ -64,7 +64,6 @@
 
   .pageHeader__navItem {
     width: 100%;
-    min-height: calc(33vh - 20px);
     margin: 0;
     background-color: #fff;
     display: flex;

@@ -4,7 +4,6 @@
 
   function activeMenu() {
     button.classList.toggle("hamburguerIcon--active");
-    document.body.classList.toggle("disableScroll");
     menu.classList.toggle("pageHeader__navList--active");
 
     const menusIsActive = button.classList.contains("hamburguerIcon--active");
