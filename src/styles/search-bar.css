@@ -3,8 +3,10 @@
   height: auto;
   max-height: 300px;
   min-height: 150px;
+  padding: 8px;
+  border-radius: 16px;
   overflow-y: auto;
-  background-color: #ebebeb;
+  background-color: #fff;
   z-index: 30;
   position: absolute;
   margin-top: 8px;
@@ -18,7 +20,7 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  border-bottom: solid 2px lightgray;
+  border-bottom: solid 2px #ebebeb;
 }
 
 .result__color {
@@ -64,7 +66,7 @@
   background-color: var(--verde-claro);
   font-size: 1.6rem;
   font-weight: 500;
-  color: white;
+  color: #fff;
   border-radius: 8px;
   margin-top: 32px;
   cursor: pointer;
@@ -72,7 +74,7 @@
 
 .searchBar__btn:hover {
   color: var(--verde-claro);
-  background-color: white;
+  background-color: #fff;
 }
 
 .searchBar__info{
@@ -93,4 +95,10 @@
 
 .lds-ring div {
   border-color: #a1dfa9 transparent transparent transparent !important;
+}
+
+@media screen and (max-width: 650px) {
+  .searchBar__content {
+    width: calc(100% - 40px);
+  }
 }

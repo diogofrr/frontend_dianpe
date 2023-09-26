@@ -100,7 +100,7 @@
 }
 
 .heroSection__title {
-  color: #ebebeb;
+  color: #fff;
   font-family: var(--fonte);
   font-size: 6.4rem;
   font-weight: normal;
@@ -108,7 +108,7 @@
 }
 
 .heroSection__subtitle {
-  color: #ebebeb;
+  color: #fff;
   font-size: 2.4rem;
   font-family: var(--fonte);
   font-weight: 300;
@@ -131,8 +131,8 @@
   align-items: center;
   gap: 10px;
   outline: none;
-  color: #ebebeb;
-  border: 2px solid #ebebeb;
+  color: #fff;
+  border: 2px solid #fff;
   font-family: var(--fonte);
   font-size: 1.6rem;
   font-weight: 400;
@@ -147,28 +147,28 @@
 }
 
 .searchBar__option {
-  background-color: #ebebeb;
+  background-color: #fff;
   outline: none;
   color: black;
-  border: solid 2px #ebebeb;
+  border: solid 2px #fff;
 }
 
 .searchBar__inputBar {
-  border: 2px solid #ebebeb;
+  border: 2px solid #fff;
   border-left: 0px;
   outline: none;
   height: 47px;
   width: 50vw;
   padding: 5px 12px;
   background-color: transparent;
-  color: #ebebeb;
+  color: #fff;
   font-family: var(--fonte);
   font-size: 1.6rem;
   font-weight: 400;
 }
 
 .searchBar__inputBar::placeholder {
-  color: #ebebeb;
+  color: #fff;
 }
 
 .searchBar__inputContainer {
@@ -178,14 +178,14 @@
 
 .searchBar__inputButton {
   background-color: transparent;
-  border: 2px solid #ebebeb;
+  border: 2px solid #fff;
   border-right: 0px;
 }
 
 .searchBar__inputButtonIcon {
   height: 24px;
   padding: 0 8px;
-  color: #ebebeb;
+  color: #fff;
 }
 
 .cardSection {
