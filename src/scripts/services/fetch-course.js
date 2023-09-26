@@ -17,7 +17,7 @@
 
   async function fetchSchoolData() {
     try {
-      const result = await fetch(`http://localhost:3000/cursos/${id}`);
+      const result = await fetch(`https://api-dianpe.onrender.com/cursos/${id}`);
       return result.json();
     } catch (error) {
       console.error("Erro ao buscar curso:", error);

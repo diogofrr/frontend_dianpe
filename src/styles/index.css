@@ -1,3 +1,7 @@
+.hidden {
+  display: none !important;
+}
+
 .pageHeader {
   display: flex;
   align-items: center;
@@ -47,7 +51,7 @@
   z-index: 2;
 }
 
-.pageHeader__navItem:hover .pageHeader__navLink  {
+.pageHeader__navItem:hover .pageHeader__navLink {
   color: var(--laranja-claro);
 }
 
@@ -204,7 +208,7 @@
   transition-duration: 0.3s;
 }
 
-.cardSection__card:hover { 
+.cardSection__card:hover {
   -webkit-transform: scale(1.04);
   transform: scale(1.04);
   transition-duration: 0.9s;
@@ -568,7 +572,10 @@
     font-size: 2.8rem;
   }
 
-  .whySection__articleParagraph, .whySection__articleListLabel, .whySection__articleLink, .pageFooter__text {
+  .whySection__articleParagraph,
+  .whySection__articleListLabel,
+  .whySection__articleLink,
+  .pageFooter__text {
     font-size: 1.2rem;
   }
 
@@ -579,7 +586,7 @@
   .authorsSection__title {
     font-size: 2.8rem;
   }
-  
+
   .heroSection__searchBar {
     flex-direction: column;
   }
@@ -598,7 +605,8 @@
     width: 280px;
   }
 
-  .card__cardSchoolImage, .card__cardCourseImage {
+  .card__cardSchoolImage,
+  .card__cardCourseImage {
     height: 290px;
   }
 
@@ -621,7 +629,7 @@
     font-size: 2rem;
   }
 
-  .authorsSection__cardImgContainer{
+  .authorsSection__cardImgContainer {
     height: 150px;
   }
 
@@ -634,11 +642,10 @@
     gap: 24px;
   }
 
-  .pageHeader__navLink  {
+  .pageHeader__navLink {
     font-size: 1.6rem !important;
   }
 }
-
 
 @media screen and (max-width: 450px) {
   .heroSection__title {
@@ -649,7 +656,8 @@
     font-size: 1.6rem;
   }
 
-  .whySection__overlay, .whySection__video {
+  .whySection__overlay,
+  .whySection__video {
     width: 300px;
   }
 }
