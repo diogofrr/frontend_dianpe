@@ -96,7 +96,7 @@
   function createElementResult(href, color, name) {
     return (`
       <li class="result__item">
-        <a href="/frontend_dianpe/src/pages/${href}" class="result__link">
+        <a href="/src/pages/${href}" class="result__link">
           <span class="result__color" style="background-color: ${color};"></span>
           <p class="result__name">${name}</p>
         </a>
